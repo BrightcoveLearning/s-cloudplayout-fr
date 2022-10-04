@@ -1,101 +1,57 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="introduction">Introduction</h2>
-    <p>Sometimes it is critical to set the exact time that your channel content will begin playing. The <strong>Hard Start</strong> feature allows you to do this, and Brightcove will automatically fill the time between the start of the channel and the hard start time by looping slate content - either the default slate or your own <a href="{{ site.cloud_playout_path }}managing-slates.html">custom slate</a>.</p>
-    <h3>Notes</h3>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="introduction">Présentation</h2>
+    <p>Il est parfois essentiel de définir l'heure exacte à laquelle le contenu de votre chaîne commencera à être diffusé. La<strong> fonction</strong> Hard Start vous permet de le faire, et Brightcove remplira automatiquement le temps entre le début de la chaîne et l'heure de démarrage ferme en bouclant le contenu de l'ardoise, soit l'ardoise par défaut, soit votre propre ardoise<a href="{{ site.cloud_playout_path }}managing-slates.html"> personnalisée. </a>.</p>
+    <h3>Remarques</h3>
     <ul>
-      <li>The hard start time must be greater than the channel start time.</li>
-      <li>When you use Hard Start, you must specify a slate - either the default one or your own <a href="{{ site.cloud_playout_path }}managing-slates.html">custom slate</a>. Also remember that your custom slate video must be on a public and permanent URL (short-lived CDN URLs are not allowed). </li>
-      <li>The channel will start at the channel start time, and the slate will begin playing immediately, looping until the hard start time.</li>
-    </ul>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Using_hard_start">Using Hard Start</h2>
-    <p>Hard Start can be set after you have created the channel configuration by clicking the <strong>Quick Edit</strong> icon (<i data-feather="edit-3"></i>) that appears on the channel details and channel running pages:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/channel-quick-edit.png" alt="Channel Quick Edit">
-      <figcaption class="bcls-caption--image">Channel Quick Edit</figcaption>
-    </figure>
-    <p>That will bring up the <strong>Edit Schedule</strong> dialog where you can enter the Hard Start time and select a slate:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/edit-scheule.png" alt="Channel Edit Schedule">
-      <figcaption class="bcls-caption--image">Channel Edit Schedule</figcaption>
-    </figure>
-    <h3>Notes for Channels in a DRAFT or SCHEDULED state</h3>
+      <li>L'heure de démarrage ferme doit être supérieure à l'heure de début du canal.</li>
+      <li>Lorsque vous utilisez Hard Start, vous devez spécifier une ardoise, soit celle par défaut, soit votre propre ardoise<a href="{{ site.cloud_playout_path }}managing-slates.html"> personnalisée</a>. N'oubliez pas non plus que votre vidéo personnalisée doit se trouver sur une URL publique et permanente (les URL CDN de courte durée ne sont pas autorisées). </li>
+      <li>La chaîne commencera à l'heure de début de la chaîne et la lecteur de la liste commencera immédiatement, en boucle jusqu'à l'heure de début difficile.</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="Using_hard_start">Utiliser Hard Start</h2>
+    <p>Hard Start peut être défini après avoir créé la configuration de la chaîne en cliquant sur l'<strong>icône</strong> Quick Edit () qui apparaît sur les pages de détails de la chaîne et de diffusion de la chaîne:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/channel-quick-edit.png" alt="Édition rapide des chaînes"> <figcaption class="bcls-caption--image">Édition rapide des chaînes</figcaption> </figure>
+    <p>Cela fera apparaître la boîte de<strong> dialogue</strong> Modifier le calendrier dans laquelle vous pouvez entrer l'heure de début difficile et sélectionner une ardoise:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/edit-scheule.png" alt="Calendrier de modification des chaînes"> <figcaption class="bcls-caption--image">Calendrier de modification des chaînes</figcaption> </figure>
+    <h3>Remarques pour les chaînes en état BROUILLON ou SCHEDU</h3>
     <ul>
-      <li>The Hard Start time must be at least 10 minutes after the Channel Start Date Time.</li>
-      <li>The Hard Start time must <strong>not</strong> be later than the Channel End Date Time (if any).</li>
-      <li>When a Hard Start is added, a slate must always be added as well (there is a default slate if you haven't created a custom one).</li>
-      <li>To remove the Hard Start, delete it in the Edit Schedule dialog and remove the slate.</li>
-      <li>You can update both the Hard Start time and the slate.</li>
+      <li>L'heure de démarrage difficile doit être d'au moins 10 minutes après la date et l'heure de début de la chaîne.</li>
+      <li>L'heure de début difficile<strong> ne doit pas</strong> être postérieure à la date et l'heure de fin de la chaîne (le cas échéant).</li>
+      <li>Lorsqu'un démarrage difficile est ajouté, une ardoise doit toujours être ajoutée également (il existe une ardoise par défaut si vous n'en avez pas créé une personnalisée).</li>
+      <li>Pour supprimer le démarrage difficile, supprimez-le dans la boîte de dialogue Modifier le calendrier et supprimez la liste.</li>
+      <li>Vous pouvez mettre à jour à la fois l'heure de démarrage difficile et l'ardoise.</li>
     </ul>
-    <h3>Notes for Channels in a RUNNING state, but content playback hasn't started</h3>
+    <h3>Remarques pour les chaînes en cours d'exécution, mais la lecteur du contenu n'a pas commencé</h3>
     <ul>
-      <li>You can update the Hard Start time, but you cannot remove it.</li>
-      <li>You can set the Hard Start time to an earlier time, as long as it is later than the current time.</li>
-      <li>The slate cannot be updated.</li>
+      <li>Vous pouvez mettre à jour l'heure de démarrage difficile, mais vous ne pouvez pas la supprimer.</li>
+      <li>Vous pouvez définir l'heure de démarrage difficile à une heure antérieure, à condition qu'elle soit postérieure à l'heure actuelle.</li>
+      <li>La liste ne peut pas être mise à jour.</li>
     </ul>
-    <h3>Notes for Channels in a RUNNING state where content playback has started</h3>
+    <h3>Remarques pour les chaînes en état RUNNING où la lecteur du contenu a commencé</h3>
     <ul>
-      <li>You cannot add or update a Hard Start time.</li>
-    </ul>
-  </section>
+      <li>Vous ne pouvez pas ajouter ou mettre à jour une heure de démarrage difficile.</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="hard_start_indicators">Indicateurs Hard Start</h2>
+    <p>Si Hard Start n'est pas disponible pour la chaîne, l'étiquette Hard Start sera grise:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/hard-start-gray.png" alt="Démarrage difficile non disponible"> <figcaption class="bcls-caption--image">Démarrage difficile non disponible</figcaption> </figure>
+    <p>Si Hard Start est disponible pour la chaîne, l'étiquette Hard Start sera verte:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/hard-start-green.png" alt="Démarrage difficile disponible"> <figcaption class="bcls-caption--image">Démarrage difficile disponible</figcaption> </figure> </section> <section class="bcls-section">
+    <h2 id="Overriding Hard Start">Remplacement du démarrage difficile</h2>
+    <h3>Canal dans un état SCHEDULED</h3>
+    <p>Si la chaîne est programmée et que vous souhaitez la démarrer immédiatement, en lisant la liste de lecteur de la chaîne au lieu de la liste de démarrage difficile, cliquez sur<span class="button-red-text-border"> Écouter maintenant</span>:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-scheduled.png" alt="Remplacer le démarrage en dur (canal programmé)"> <figcaption class="bcls-caption--image">Remplacer le démarrage en dur (canal programmé)</figcaption> </figure>
+    <p>Notez que l'EPG sera également mis à jour automatiquement pour refléter l'heure de début réelle:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-epg-update.png" alt="EPG mis à jour pour Override"> <figcaption class="bcls-caption--image">EPG mis à jour pour Override</figcaption> </figure>
 
-  <section class="bcls-section">
-    <h2 id="hard_start_indicators">Hard Start indicators</h2>
-    <p>If Hard Start is not available for the channel, the Hard Start label will be gray:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/hard-start-gray.png" alt="Hard Start Unavailable">
-      <figcaption class="bcls-caption--image">Hard Start Unavailable</figcaption>
-    </figure>
-    <p>If Hard Start is available for the channel, the Hard Start label will be green:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/hard-start-green.png" alt="Hard Start Available">
-      <figcaption class="bcls-caption--image">Hard Start Available</figcaption>
-    </figure>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="Overriding Hard Start">Overriding Hard Start</h2>
-    <h3>Channel in a SCHEDULED state</h3>
-    <p>If the channel is scheduled, and you wish to start it immediately, playing the channel playlist instead of the hard start slate, click <span class="button-red-text-border">Play Now</span>:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-scheduled.png" alt="Override Hard Start (Scheduled Channel)">
-      <figcaption class="bcls-caption--image">Override Hard Start (Scheduled Channel)</figcaption>
-    </figure>
-    <p>Note that the EPG will also be updated automatically to reflect the actual start time:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-epg-update.png" alt="EPG Updated for Override">
-      <figcaption class="bcls-caption--image">EPG Updated for Override</figcaption>
-    </figure>
-
-    <h3>Channel in a RUNNING state (with the <strong>slate</strong> playing)</h3>
-    <p>If the channel has started, but the Hard Start time has not been reached, you can stop the slate and start the channel content immediately by selecting a video in the playlist and clicking the <strong>play</strong> button on the video thumbnail:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-running.png" alt="Override Hard Start Running Channel">
-      <figcaption class="bcls-caption--image">Override Hard Start Running Channel</figcaption>
-    </figure>
-    <p>The selected video will start immediately and the Hard Start time for the channel will be updated to the current time:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-time-updated.png" alt="Hard Start Time Updated by Override">
-      <figcaption class="bcls-caption--image">Hard Start Time Updated by Override</figcaption>
-    </figure>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="rerunning_a_stopped_channel">Rerunning a stopped channel</h2>
-    <p>A channel with a Hard Start time retains that information after it has stopped. Therefore, if you want the channel to play again, you will need to edit the schedule to set future date/times.</p>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="notes_and_known_issues">Notes and known issues</h2>
+    <h3>Chaîne dans un état RUNNING (avec l'<strong>ardoise en cours</strong> d'exécution)</h3>
+    <p>Si la chaîne a démarré mais que l'heure de démarrage difficile n'est pas atteinte, vous pouvez arrêter la liste et lancer le contenu de la chaîne immédiatement en sélectionnant une vidéo dans la liste de lecteur et en cliquant sur le<strong> bouton de</strong> lecteur sur la vignette de la vidéo:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-running.png" alt="Remplacer le canal de démarrage en cours"> <figcaption class="bcls-caption--image">Remplacer le canal de démarrage en cours</figcaption> </figure>
+    <p>La vidéo sélectionnée démarre immédiatement et l'heure de démarrage difficile de la chaîne est mise à jour à l'heure actuelle:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/override-hard-start-time-updated.png" alt="Heure de démarrage difficile mise à jour par remplacement"> <figcaption class="bcls-caption--image">Heure de démarrage difficile mise à jour par remplacement</figcaption> </figure> </section> <section class="bcls-section">
+    <h2 id="rerunning_a_stopped_channel">Réexécution d'un canal arrêté</h2>
+    <p>Une chaîne avec une heure de démarrage difficile conserve ces informations après son arrêt. Par conséquent, si vous souhaitez que la chaîne soit rediffusée, vous devrez modifier la programmation pour définir les dates et heures futures.</p>  </section><section class="bcls-section">
+    <h2 id="notes_and_known_issues">Remarques et problèmes connus</h2>
     <ul>
-      <li>If you need to start the channel immediately while retaining the hard start time (you want to get the channel started, but with the hard start slate), we recommend that you edit the schedule and update the channel start time to a nearby time, instead of using Play Now on the channel.</li>
-      <li>When choosing a custom slate, be sure that the URL for the MP4 will be always available in a region close the to the selected region for the channel. If the slate is not accessible from the Cloud Playout channel, this may cause the destinations (BC Live, etc.) to close the connections since they won’t be receiving any feeds. </li>
-      <li>Once the channel is stopped and the channel is in DRAFT state, currently the EPG is faultily constructed from the hard start time as if it’s a fresh channel, instead of showing the actual as-run record of played assets.</li>
-    </ul>
-  </section>
-</article>
+      <li>Si vous devez démarrer la chaîne immédiatement tout en conservant l'heure de début fixe (vous souhaitez démarrer la chaîne, mais avec la liste de démarrage difficile), nous vous recommandons de modifier la programmation et de mettre à jour l'heure de début de la chaîne à une heure proche, au lieu d'utiliser Jouer maintenant sur la chaîne.</li>
+      <li>Lorsque vous choisissez une ardoise personnalisée, assurez-vous que l'URL du MP4 sera toujours disponible dans une région proche de la région sélectionnée pour la chaîne. Si l'ardoise n'est pas accessible depuis le canal Cloud Playout, les destinations (BC Live, etc.) peuvent fermer les connexions car elles ne recevront aucun flux.™ </li>
+      <li>Une fois que le canal est arrêté et que le canal est en état DRAFT, l'EPG est actuellement construit de manière défectueuse à partir de l'heure de début difficile comme s'il s'agissait d'un nouveau canal, au lieu d'afficher l'enregistrement réel des ressources jouées.™</li>
+    </ul>  </section></article>

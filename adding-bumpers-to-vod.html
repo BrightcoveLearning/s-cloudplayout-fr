@@ -1,66 +1,41 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>If you are not enabling Server-Side Ads (SSAI) for your channel, you may still want to include bumpers - pre- or post-roll short videos which might be in-house ads or some other kind of announcement or promotion. You might also use bumpers to create buffers for your live programming segments.</p>
-    <p>There is nothing you need to do in the initial channel creation - the option to <span class="button-blue">Insert Bumpers</span> will appear automatically after the channel is created. This applies to all channels, including those enabled for Live streams or SSAI</p>
-    <p>You can add multiple bumpers to the same video, and you can rearrange bumpers in the program order, just as you can videos. However, some care needs to be taken in doing this or you may end up with an inaccurate EPG. See <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html#epg_bumpers">The EPG and Bumpers</a> for full details.</p>
-    <p>Bumpers will <strong>not</strong> appear in the <a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG</a> but the duration of the bumper will be added to the video before or after (depending on whether it is pre-roll or post-roll).</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Enabling_bumper_content">Enabling bumper content</h2>
-    <p>The bumpers can be any video in your account, but it must have <strong>one of</strong> the following tags:</p>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Si vous n'activez pas les publicités côté serveur (SSAI) pour votre chaîne, vous pouvez tout de même inclure des bumpers-fr/ (courtes vidéos avant ou après la diffusion) qui peuvent être des publicités internes ou tout autre type d'annonce ou de promotion. Vous pouvez également utiliser des bumpers pour créer des tampons pour vos segments de programmation en direct.</p>
+    <p>Vous n'avez rien à faire lors de la création initiale du canal - l'option<span class="button-blue"> Insérer des pare-chocs</span> apparaîtra automatiquement après la création du canal. Cela s'applique à toutes les chaînes, y compris celles activées pour les diffusions en direct ou SSAI</p>
+    <p>Vous pouvez ajouter plusieurs bumpers à la même vidéo, et vous pouvez réorganiser les pare-chocs dans l'ordre des programmes, tout comme vous pouvez le faire pour les vidéos. Cependant, certaines précautions doivent être prises, sinon vous risquez de vous retrouver avec un EPG inexact. Voir<a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html#epg_bumpers"> l'EPG et les pare-chocs</a> pour plus de détails.</p>
+    <p>Les pare-chocs<strong> n'</strong>apparaîtront pas dans l'<a href="https://apis.support.brightcove.com/cloud-playout-apis/references/reference-epg.html">EPG</a> mais la durée du pare-chocs sera ajoutée à la vidéo avant ou après (selon qu'il s'agit d'un pré-roll ou d'un post-roll).</p>  </section><section class="bcls-section">
+    <h2 id="Enabling_bumper_content">Activation du contenu de</h2>
+    <p>Les pare-chocs peuvent être n'importe quelle vidéo de votre compte, mais ils doivent porter<strong> l'une des</strong> balises suivantes:</p>
     <ul>
-      <li><code translate="no">cp-preroll-bumper</code></li>
-      <li><code translate="no">cp-postroll-bumper</code></li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--warning">Potential problems:
+      <li><code translate="no">pare-chocs CP-PreRoll</code></li>
+      <li><code translate="no">pare-chocs cp-postroll-</code></li>
+    </ul> <aside class="bcls-aside bcls-aside--warning">Problèmes potentiels:
 			<ul>
-				<li>If you add both of these tags to the same video, it will still work as a bumper, but the <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">EPG</a> will be inaccurate.</li>
-				<li>Similarly, for SSAI-enabled channels, ad placeholders are treated as post-roll ads. You should not have a pre-roll bumper followed by an ad placeholder, as this effectively creates a pre-roll<i data-feather="arrow-right"></i>post-roll sequence that will cause the EPG to be inaccurate.</li>
-			</ul>
-			</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="inserting-bumpers">Inserting bumpers</h2>
+				<li>Si vous ajoutez ces deux tags à la même vidéo, cela fonctionnera toujours comme un pare-chocs, mais l'<a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">EPG</a> sera inexact.</li>
+				<li>De même, pour les chaînes compatibles SSAI, les espaces réservés aux annonces sont traités comme des publicités post-roll. Vous ne devez pas avoir de pare-chocs pré-roll suivi d'un espace réservé à l'annonce, car cela crée effectivement une séquence pré-roll-post-roll qui provoquera une imprécision de l'EPG.</li>
+			</ul>   </aside></section><section class="bcls-section">
+    <h2 id="inserting-bumpers">Insertion des pare-chocs</h2>
     <ol class="bcls-tasklist-restart">
-      <li>Before you can insert bumpers, you must <a href="{{ site.cloud_playout_path }}cloud-playout-stream-vod.html#add_videos">add videos and/or live events to the channel</a> and <strong>save</strong> the changes.</li>
+      <li>Avant de pouvoir insérer des pare-chocs, vous devez<a href="{{ site.cloud_playout_path }}cloud-playout-stream-vod.html#add_videos"> ajouter des vidéos et/ou des événements en direct à la chaîne</a> et<strong> enregistrer</strong> les modifications.</li>
       <li>
-        Select one or more videos and/or live events and click <span class="button-blue">Insert Bumpers</span>.<sup><strong><a href="#note1-1">[1-1]</a></strong></sup>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/select-videos-for-bumper.png" alt="Select Videos for Bumper">
-          <figcaption class="bcls-caption--image">Select Videos for Bumper</figcaption>
-        </figure>
+        Sélectionnez une ou plusieurs vidéos et/ou événements en direct et cliquez sur<span class="button-blue"> Insérer des pare-chocs</span>. <sup><strong><a href="#note1-1">[1-1]</a></strong></sup> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/select-videos-for-bumper.png" alt="Sélectionner des vidéos pour Bumper"> <figcaption class="bcls-caption--image">Sélectionner des vidéos pour Bumper</figcaption> </figure>
       </li>
       <li>
-        In the <strong>Bumpers</strong> dialog select <strong>Pre-Roll</strong> or <strong>Post-Roll</strong> and then click <span class="button-blue">Insert</span> beside the bumper video you want to insert.<sup><strong><a href="#note1-2">[1-2]</a></strong></sup>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-dialog.png" alt="Bumper Dialog">
-          <figcaption class="bcls-caption--image">Bumper Dialog</figcaption>
-        </figure>
+        Dans la boîte de<strong> dialogue</strong> Bumpers, sélectionnez<strong> Pre-Roll</strong> ou<strong> Post-Roll</strong> puis cliquez sur<span class="button-blue"> Insérer</span> à côté du pare-chocs vidéo que vous souhaitez insérer. <sup><strong><a href="#note1-2">[1-2]</a></strong></sup> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-dialog.png" alt="Dialogue Bumper"> <figcaption class="bcls-caption--image">Dialogue Bumper</figcaption> </figure>
       </li>
       <li>
-        You will now see the bumpers appear in the program list:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-in-program-list.png" alt="Bumper in Program List">
-          <figcaption class="bcls-caption--image">Bumper in Program List</figcaption>
-        </figure>
+        Vous verrez maintenant les pare-chocs apparaître dans la liste des programmes: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/bumper-in-program-list.png" alt="Bumper dans la liste des programmes"> <figcaption class="bcls-caption--image">Bumper dans la liste des programmes</figcaption> </figure>
       </li>
     </ol>
-    <h3>Notes</h3>
+    <h3>Remarques</h3>
     <ul style="list-style: none;">
-      <li id="note1-1" style="list-style: none;"><sup><strong>[1-1]</strong></sup> If you select multiple items, the same bumper will be added to each one. If you want different bumpers for different items, add them one by one.</li>
-      <li id="note1-2" style="list-style: none;"><sup><strong>[1-2]</strong></sup> Remember that only videos that have been <a href="#Enabling_bumper_content">tagged as bumpers</a> will appear in the list.</li>
-  </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="removing_bumpers">Moving or removing bumpers</h2>
-    <p>Drag and drop bumpers to move them to new locations in the program list.</p>
-    <p>To remove a bumper, just select it, click <strong>Delete</strong>, and then click <strong>Delete</strong> again in the confirmation dialog.</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/delete-bumper.png" alt="Delete Bumper">
-      <figcaption class="bcls-caption--image">Delete Bumper</figcaption>
-    </figure>
-  </section>
-</article>
+      <li id="note1-1" style="list-style: none;"><sup><strong>[1-1]</strong></sup> Si vous sélectionnez plusieurs éléments, le même pare-chocs sera ajouté à chacun d'eux. Si vous voulez des pare-chocs différents pour différents articles, ajoutez-les un par un.</li>
+      <li id="note1-2" style="list-style: none;"><sup><strong>[1-2]</strong></sup> N'oubliez pas que seules les vidéos qui ont été<a href="#Enabling_bumper_content"> marquées comme bumpers</a> apparaîtront dans la liste.</li>
+  </ul>  </section><section class="bcls-section">
+    <h2 id="removing_bumpers">Déplacement ou retrait des pare-chocs</h2>
+    <p>Faites glisser et déposez les pare-chocs pour les déplacer vers de nouveaux emplacements dans la liste des programmes.</p>
+    <p>Pour retirer un pare-chocs, sélectionnez-le, cliquez sur<strong> Supprimer</strong>, puis cliquez à<strong> nouveau sur</strong> Supprimer dans la boîte de dialogue de confirmation.</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/delete-bumper.png" alt="Supprimer le pare-chocs"> <figcaption class="bcls-caption--image">Supprimer le pare-chocs</figcaption> </figure> </section> </article> 

@@ -1,39 +1,21 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>Captions are helpful for viewers with hearing impairments, and may be required if your channel adheres to accessibility requirements.</p>
-    <p>Cloud Playout can pass through the embedded 608/708 closed captions from VoD (and a Live fallback slate) and Live events and make the captions available across all outputs (Brightcove Live (SSAI/non-SSAI) , 3rd party RTMP and S3+HLS). </p>
-    <aside class="bcls-aside bcls-aside--information language-editable">Closed captions are added to VOD MP4 renditions when text tracks are ingested using the <code translate="No">embed_closed_caption</code> option. See <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">Ingesting WebVTT Files</a></aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Importing_captions">Importing captions</h2>
-    <p>To import captions into your Cloud Playout channel, you must enable that option when you create the channel:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/captions-option-new-channel.png" alt="Create Channel with Captions">
-      <figcaption class="bcls-caption--image">Create Channel with Captions</figcaption>
-    </figure>
-    <p>This option is enabled by default. If you decided you want to remove the captions from the channel, you can edit the channel configuration and disable the option - but this change can only be made while the channel is in DRAFT state.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="How_Cloud_Playout_handles_captions">How Cloud Playout handles captions</h2>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Les sous-titres sont utiles aux spectateurs malentendants et peuvent être nécessaires si votre chaîne respecte les exigences d'accessibilité.</p>
+    <p>Cloud Playout peut passer par les sous-titres 608/708 intégrés de la VoD (et d'une liste de secours en direct) et des événements en direct et rendre les sous-titres disponibles sur toutes les sorties (Brightcove Live (SSAI/non-SSAI), RTMP tiers et S3+HLS). </p> <aside class="bcls-aside bcls-aside--information language-editable">Les sous-titres codés sont ajoutés aux rendus MP4 VOD lorsque des pistes de texte sont ingérées à l'aide de l'<code translate="No">option</code> embed_closed_caption. Voir<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html"> Ingestion de fichiers WebVTT</a></aside> </section> <section class="bcls-section">
+    <h2 id="Importing_captions">Importer des légendes</h2>
+    <p>Pour importer des sous-titres dans votre chaîne Cloud Playout, vous devez activer cette option lorsque vous créez la chaîne:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/captions-option-new-channel.png" alt="Créer une chaîne avec des sous-titres"> <figcaption class="bcls-caption--image">Créer une chaîne avec des sous-titres</figcaption> </figure>
+    <p>Cette option est activée par défaut. Si vous avez décidé de supprimer les sous-titres de la chaîne, vous pouvez modifier la configuration de la chaîne et désactiver l'option, mais cette modification ne peut être effectuée que lorsque la chaîne est à l'état BROUILLON.</p>  </section><section class="bcls-section">
+    <h2 id="How_Cloud_Playout_handles_captions">Comment Cloud Playout gère les sous-titres</h2>
     <ul>
-      <li>Only one language track is supported on VoD MP4 renditions.</li>
-      <li>If a live stream contains embedded multi language channels or both 608 and 708 channels, everything will be passed through downstream.</li>
-      <li>For S3+HLS output only the first language channel is considered for the output, so only one VTT output is generated even though the input may contain more than one caption channels.</li>
+      <li>Une seule piste linguistique est prise en charge sur les rendus MP4 VoD.</li>
+      <li>Si un flux en direct contient des canaux multilingues intégrés ou des canaux 608 et 708, tout sera transmis en aval.</li>
+      <li>Pour la sortie S3+HLS, seul le premier canal de langue est pris en compte pour la sortie, de sorte qu'une seule sortie VTT est générée même si l'entrée peut contenir plus d'un canal de légende.</li>
     </ul>
-    <p>The diagram below summarizes how Cloud Playout handles captions for different channel types, asset types, and destinations:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/import-captions-design.png" alt="Summary of Caption Handling">
-      <figcaption class="bcls-caption--image">Summary of Caption Handling</figcaption>
-    </figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Notes">Notes</h2>
+    <p>Le diagramme ci-dessous résume la manière dont Cloud Playout gère les sous-titres pour différents types de canaux, types de ressources et destinations:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/import-captions-design.png" alt="Résumé de Caption Handling"> <figcaption class="bcls-caption--image">Résumé de Caption Handling</figcaption> </figure> </section> <section class="bcls-section">
+    <h2 id="Notes">Remarques</h2>
     <ul>
-      <li>The Brightcove Player does not render the language codes in the captions menu (it will just render the Caption service name such as CC1, CC3 for 608 captions or cc1_708, cc3_708 for 708 captions).</li>
-      <li>If Live events in the channel program are supplied with multi-lingual captions is mixed with VOD assets that support only single language captions, then everything that is sent through to the Cloud Playout channel is just passed through to the destination.</li>
-    </ul>
-  </section>
-</article>
+      <li>Le lecteur Brightcove ne restitue pas les codes de langue dans le menu des sous-titres (il affiche simplement le nom du service Caption tel que CC1, CC3 pour 608 sous-titres ou cc1_708, cc3_708 pour 708 sous-titres).</li>
+      <li>Si les événements en direct du programme de la chaîne sont fournis avec des sous-titres multilingues et sont mélangés à des ressources VOD qui ne prennent en charge que les sous-titres dans une seule langue, alors tout ce qui est envoyé sur la chaîne Cloud Playout est simplement transmis à la destination.</li>
+    </ul>  </section></article>

@@ -1,169 +1,117 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <p>Also see <a href="{{ site.cloud_playout_path }}dynamic-overlays.html">Adding Dynamic Overlays</a>.</p>
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>You can use the static image overlay feature to superimpose a static image onto a video in a Cloud Playout channel. A static image is a still image that doesn't have motion. You prepare the image and store it outside of Cloud Playout and provide to us as a publicly accessible , unauthenticated http/https URL.</p>
-    <h3>Examples</h3>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary>
+  <p>Consultez également la section<a href="{{ site.cloud_playout_path }}dynamic-overlays.html"> Ajout de superpositions dynamiques</a>.</p> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Vous pouvez utiliser la fonctionnalité de superposition d'images statiques pour superposer une image statique à une vidéo dans une chaîne Cloud Playout. Une image statique est une image fixe qui ne comporte aucun mouvement. Vous préparez l'image et la stockez en dehors de Cloud Playout et vous nous fournissez sous la forme d'une URL http/https non authentifiée et accessible au public.</p>
+    <h3>Exemples</h3>
     <ul>
-      <li>You want to insert a static image overlay at a specific time during the channel’s runtime and run it for 10 seconds. You want the image overlay to appear in the lower-right corner of the video frame. You want the image overlay to have 50% opacity.</li>
-      <li>You want to insert two static image overlays so that they both appear in the video frame either at the same time or with some overlap. You want the display of the image overlays to slightly overlap so that one image overlay appears in a location and, while that image overlay is still showing, another image overlay appears in another location.</li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Implementation">Implementation</h2>
+      <li>Vous souhaitez insérer une superposition d'image statique à un moment précis pendant l'exécution du canal et l'exécuter pendant 10 secondes.™ Vous souhaitez que la superposition d'image apparaisse dans le coin inférieur droit de l'image vidéo. Vous souhaitez que la superposition d'image ait une opacité de 50&nbsp;%.</li>
+      <li>Vous souhaitez insérer deux superpositions d'images statiques afin qu'elles apparaissent toutes les deux dans l'image vidéo en même temps ou avec un certain chevauchement. Vous souhaitez que l'affichage des superpositions d'images se chevauche légèrement afin qu'une superposition d'image apparaisse à un emplacement et, tant que cette superposition d'image est toujours visible, une autre superposition d'image apparaisse à un autre emplacement.</li>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="Implementation">Mise en</h2>
     <ul>
-      <li>The image that you overlay on a video should be a <a href="https://en.wikipedia.org/wiki/Truevision_TGA">.tga</a> or a .png file.</li>
+      <li>L'image que vous superposez sur une vidéo doit être un fichier<a href="https://en.wikipedia.org/wiki/Truevision_TGA"> .tga</a> ou .png.</li>
       <li>
-        Create and manage static overlay images for an account using the side menu item:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlays-menu-item.png" alt="Overlays">
-          <figcaption class="bcls-caption--image">Overlays</figcaption>
-        </figure>
+        Créez et gérez des images de superposition statiques pour un compte à l'aide de l'élément de menu latéral: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlays-menu-item.png" alt="Superpositions"> <figcaption class="bcls-caption--image">Superpositions</figcaption> </figure>
       </li>
       <li>
-        The overlay images then can be associated with a channel:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-associate-with-channel.png" alt="Associate Overlay with Channel">
-          <figcaption class="bcls-caption--image">Associate Overlay with Channel</figcaption>
-        </figure>
-        <br>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlays-draft-channel.png" alt="Overlays in Draft Channel">
-          <figcaption class="bcls-caption--image">Overlays in Draft Channel</figcaption>
-        </figure>
-        <br>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlays-for-running-channel.png" alt="Overlays in Running Channel">
-          <figcaption class="bcls-caption--image">Overlays in Running Channel</figcaption>
-        </figure>
+        Les images superposées peuvent ensuite être associées à un canal: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-associate-with-channel.png" alt="Associer la superposition au canal"> <figcaption class="bcls-caption--image">Associer la superposition au canal</figcaption> </figure>
+        <br> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlays-draft-channel.png" alt="Superpositions dans Draft Channel"> <figcaption class="bcls-caption--image">Superpositions dans Draft Channel</figcaption> </figure>
+        <br> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlays-for-running-channel.png" alt="Superpositions dans Running Channel"> <figcaption class="bcls-caption--image">Superpositions dans Running Channel</figcaption> </figure>
       </li>
       <li>
-        You can insert up to two <strong>layers</strong> at one time. Each image should be a <strong>separate layer</strong>. If different images are scheduled on same layer for the same time or if they overlap during any time window, then the image that is provisioned later will remove the existing image on the same layer.
+        Vous pouvez insérer jusqu'à deux<strong> calques</strong> à la fois. Chaque image doit être un calque<strong> distinct</strong>. Si différentes images sont planifiées sur la même couche pour la même période ou si elles se chevauchent pendant n'importe quelle fenêtre horaire, l'image provisionnée ultérieurement supprimera l'image existante sur la même couche.
           <ul>
-            <li>The layers are in Z order, which means that <strong>overlays with higher values of layer are inserted on top of overlays with lower values of layer</strong>.</li>
+            <li>Les couches sont dans l'ordre Z, ce qui signifie que les<strong> superpositions avec des valeurs de couche plus élevées sont insérées au-dessus des superpositions avec des valeurs de calque inférieures</strong>.</li>
           </ul>
       </li>
-      <li>You can set up the overlays to all appear on the underlying video at the same time (or not), and you can set them up to physically overlap each other (or not).</li>
+      <li>Vous pouvez configurer les incrustations pour qu'elles apparaissent toutes sur la vidéo sous-jacente en même temps (ou non), et vous pouvez les configurer pour qu'elles se chevauchent physiquement (ou non).</li>
       <li>
-        You can configure each image overlay with a start time and duration:
+        Vous pouvez configurer chaque superposition d'image avec une heure et une durée de début:
         <ul>
-          <li>If the duration is set, the maximum duration is 24 hours</li>
-          <li>If the duration is not set, the overlay will continue to be shown until deactivated</li>
-          <li>Start time must be a future time</li>
+          <li>Si la durée est définie, la durée maximale est de 24 heures</li>
+          <li>Si la durée n'est pas définie, la superposition continuera d'être affichée jusqu'à ce qu'elle soit désactivée</li>
+          <li>L'heure de début doit être une heure future</li>
         </ul>
       </li>
-      <li>You can configure with an opacity of 0 - 100. <strong>0</strong> is transparent and <strong>100</strong> is fully opaque.</li>
+      <li>Vous pouvez configurer avec une opacité comprise entre 0 et 100. <strong>0</strong> est transparent et<strong> 100</strong> est totalement opaque.</li>
       <li>
-        You can position the image overlay on the video frame, as specified by x/y coordinates. By default the X, Y coordinates are considered as 0, 0 (<strong>the top left corner of a video frame</strong>):
+        Vous pouvez positionner la superposition d'image sur l'image vidéo, comme indiqué par les coordonnées x/y. Par défaut, les coordonnées X, Y sont considérées comme 0, 0 (<strong>le coin supérieur gauche d'une image vidéo</strong>):
         <ul>
-          <li><strong>Position X</strong>: the position of the left edge of the overlay relative to the left edge of the video frame, in pixels. If the placement causes the overlay to extend beyond the right edge of the underlying video, then the overlay will be cropped on the right.</li>
-          <li><strong>Position Y</strong>: the position of the top edge of the overlay relative to the top edge of the video frame, in pixels. If the placement causes the overlay to extend beyond the bottom edge of the underlying video, then the overlay will be cropped on the bottom.</li>
+          <li><strong>Position X</strong>: position du bord gauche de l'incrustation par rapport au bord gauche de l'image vidéo, en pixels. Si le placement entraîne l'extension de la superposition au-delà du bord droit de la vidéo sous-jacente, la superposition sera recadrée sur la droite.</li>
+          <li><strong>Position Y</strong>: position du bord supérieur de la superposition par rapport au bord supérieur de l'image vidéo, en pixels. Si le placement entraîne l'extension de la superposition au-delà du bord inférieur de la vidéo sous-jacente, la superposition sera recadrée en bas.</li>
         </ul>
       </li>
-      <li>
-        <strong>Sizing:</strong> the <strong>Use Original</strong> option can be used for Resolution to use the original resolution of the supplied image:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-use-original-size.png" alt="Use Original Image Size">
-          <figcaption class="bcls-caption--image">Use Original Image Size</figcaption>
-        </figure>
+      <li> <strong>Dimensionnement:</strong> l'<strong>option</strong> Utiliser l'original peut être utilisée pour Résolution afin d'utiliser la résolution d'origine de l'image fournie: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-use-original-size.png" alt="Utiliser la taille de l'image originale"> <figcaption class="bcls-caption--image">Utiliser la taille de l'image originale</figcaption> </figure>
         <ul>
           <li>
-            You can provide a custom <strong>width</strong> and <strong>height</strong> for the resolution to let the system scale the image before applying it on the source video:
-            <figure class="bcls-figure">
-              <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-custom-width-height.png" alt="Set Width and Height">
-              <figcaption class="bcls-caption--image">Set Width and Height</figcaption>
-            </figure>
+            Vous pouvez fournir une<strong> largeur</strong> et une<strong> hauteur personnalisées</strong> pour la résolution afin de permettre au système de redimensionner l'image avant de l'appliquer à la vidéo source: <figure class="bcls-figure">
+              <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-custom-width-height.png" alt="Régler la largeur et la hauteur"> <figcaption class="bcls-caption--image">Régler la largeur et la hauteur</figcaption> </figure>
           </li>
-          <li>Leaving the <strong>width</strong> and <strong>height</strong> empty and <strong>Use Original</strong> unchecked will cause the system use the channel’s output resolution. For example: Mobile and Web output will set the overlay resolution as 720p and a Smart TV profile will set the overlay resolution as 1080p. <strong>Using this option is not recommended</strong> since it might not always be aligned with the MP4 source resolution.</li>
+          <li>Si vous laissez la<strong> largeur</strong> et la<strong> hauteur</strong> vides et que l'option<strong> Utiliser l'original</strong> n'est pas cochée, le système utilisera la résolution de sortie du canal.™ Par exemple: La sortie mobile et Web définira la résolution de superposition sur 720p et un profil Smart TV définira la résolution de superposition sur 1080p. <strong>L'utilisation de cette option n'est pas recommandée</strong> car elle n'est pas toujours alignée sur la résolution de la source MP4.</li>
         </ul>
       </li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="State_transitions">State transitions</h2>
-    <p>State transitions for overlay schedules</p>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="State_transitions">Transitions étatiques</h2>
+    <p>Transitions d'état pour les calendriers</p>
     <ul>
-      <li>
-        <strong>INACTIVE</strong>
+      <li> <strong>INACTIF</strong>
         <ul>
-          <li>A newly created schedule (or)</li> 
-          <li>A schedule that has already completed the run (or)</li>
-          <li>A schedule that is already deactivated.</li> 
-          <li>You can change the start time to bring it back to SCHEDULED state with the same or updated overlay configuration.</li>
-          <li>Delete - if you will no longer use this configuration.</li>
-          <li>Modify for any configuration changes.</li>
+          <li>Un calendrier nouvellement créé (ou)</li> 
+          <li>Un programme qui a déjà terminé l'exécution (ou)</li>
+          <li>Une planification déjà désactivée.</li> 
+          <li>Vous pouvez modifier l'heure de début pour la ramener à l'état SCHEDULED avec la même configuration de superposition ou une configuration mise à jour.</li>
+          <li>Supprimer: si vous n'utilisez plus cette configuration.</li>
+          <li>Modifiez pour toute modification de configuration.</li>
         </ul>
       </li>
-      <li>
-        <strong>SCHEDULED</strong>
+      <li> <strong>PROGRAMMÉ</strong>
         <ul>
-          <li>Scheduled to start at the specified start time.</li> 
-          <li>Delete if you no longer need this schedule.</li>
-          <li>Modify for any configuration changes.</li> 
+          <li>Démarrage programmé à l'heure de début spécifiée.</li> 
+          <li>Supprimez-le si vous n'avez plus besoin de ce calendrier.</li>
+          <li>Modifiez pour toute modification de configuration.</li> 
         </ul>
       </li>
-      <li>
-        <strong>ACTIVE</strong>
+      <li> <strong>ACTIF</strong>
         <ul>
-          <li>A schedule that is currently in progress.</li> 
-          <li>Deactivate when you need to stop the overlay.</li>
-          <li>Modify any configuration except layer and start_time.</li> 
-          <li>Deletion not allowed. You need to deactivate first.</li>
+          <li>Un calendrier actuellement en cours.</li> 
+          <li>Désactivez-le lorsque vous devez arrêter la superposition.</li>
+          <li>Modifiez n'importe quelle configuration sauf layer et start_time.</li> 
+          <li>La suppression n'est pas autorisée. Vous devez d'abord désactiver.</li>
         </ul>
       </li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information language-editable">You can edit the overlays at any time. However <strong>layer</strong> and <strong>start time</strong> cannot be changed for an <strong>ACTIVE</strong> overlay. You can still change the resolution, x/y coordinates, opacity or even the image itself on an active overlay schedule.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Contextual_Overlay_Launch">Contextual Overlay Launch</h2>
-    <p>For ease of access, if you want the overlay to appear for a specific video in the playlist, you can mouse hover the video in the playlist and click on the <strong>Add Overlay icon</strong> ( <img src="/assets/images/s-cloudplayout-img/overlay-icon.svg" alt="overlay icon"> ), the UI will launch the Add Overlays modal, with the start time and duration of the selected video.</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-add-particular-video.png" alt="Contextual Overlay Launch">
-      <figcaption class="bcls-caption--image">Contextual Overlay Launch</figcaption>
-    </figure>
-    <h3>Notes</h3>
+    </ul> <aside class="bcls-aside bcls-aside--information language-editable">Vous pouvez modifier les incrustations à tout moment. Cependant,<strong> la couche</strong> et l'heure de<strong> début</strong> ne peuvent pas être modifiées pour une<strong> superposition</strong> ACTIVE. Vous pouvez toujours modifier la résolution, les coordonnées x/y, l'opacité ou même l'image elle-même sur une planification de superposition active.</aside> </section> <section class="bcls-section">
+    <h2 id="Contextual_Overlay_Launch">Lancement de la superposition contextuelle</h2>
+    <p>Pour faciliter l'accès, si vous souhaitez que l'incrustation apparaisse pour une vidéo spécifique de la liste de lecteur, vous pouvez passer la souris sur la vidéo dans la liste de lecteur et cliquer sur l'icône<strong> Ajouter une superposition</strong> ( <img src="/assets/images/s-cloudplayout-img/overlay-icon.svg" alt="icône de superposition"> ), l'interface utilisateur lancera la fenêtre modale Ajouter des superpositions, avec l'heure de début et la durée de la vidéo sélectionnée.</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-add-particular-video.png" alt="Lancement de la superposition contextuelle"> <figcaption class="bcls-caption--image">Lancement de la superposition contextuelle</figcaption> </figure>
+    <h3>Remarques</h3>
     <ol>
-      <li>This will create a schedule for the selected video’s start time and it’s not attached to the video itself. In other words, if the video is re-ordered (or) deleted (or) start time changed due to various changes to the EPG schedule, the overlay schedule will still remain on the originally scheduled start time.</li>
-      <li>This Add Overlay in context to the video is recommended to be used on a Running channel rather than on a channel in DRAFT or SCHEDULED state - because the running channel is more time accurate (powered by EPG) than the channels in other states.</li>
-      <li>On a running channel, this option is available on all videos following the current playing video.</li>
-      <li>This option is not available for Ad placeholder videos on SSAI channel.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Image_handling">Image handling</h2>
-    <p>The image is overlaid on the underlying source video pixel for pixel.</p>
-    <aside class="bcls-aside bcls-aside--warning language-editable">If the overlay is larger than the underlying video or overruns an edge of the underlying video the overlay will not be applied completely on the source video (it will be cropped). This is applicable for VoD assets as well as Live segments.</aside>
-    <p>Below are some some possible fixes/workarounds for a case where the overlay is larger than the video.</p>
-    <h3>Problem case</h3>
-    <p>The diagram below shows a too-large overlay, with a company logo in the lower-right corner and therefore hidden:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-problem-case.png" alt="Problem Case">
-      <figcaption class="bcls-caption--image">Problem Case</figcaption>
-    </figure>
+      <li>Cela créera un calendrier pour l'heure de début de la vidéo sélectionnée et celle-ci n'est pas attachée à la vidéo elle-même.™™ En d'autres termes, si la vidéo est réorganisée (ou) supprimée (ou) si l'heure de début est modifiée en raison de diverses modifications apportées au calendrier EPG, le calendrier de superposition restera à l'heure de début initialement prévue.</li>
+      <li>Il est recommandé d'utiliser cette option Ajouter une superposition dans le contexte de la vidéo sur une chaîne en cours d'exécution plutôt que sur une chaîne en état DRAFT ou SCHEDULED, car la chaîne en cours d'exécution est plus précise dans le temps (alimentée par EPG) que les chaînes dans d'autres états.</li>
+      <li>Sur une chaîne en cours d'exécution, cette option est disponible sur toutes les vidéos suivant la vidéo en cours de lecteur.</li>
+      <li>Cette option n'est pas disponible pour les vidéos avec espace réservé aux annonces diffusées sur la chaîne SSAI.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Image_handling">Gestion des images</h2>
+    <p>L'image est superposée à la vidéo source sous-jacente pixel par pixel.</p> <aside class="bcls-aside bcls-aside--warning language-editable">Si la superposition est plus grande que la vidéo sous-jacente ou dépasse un bord de la vidéo sous-jacente, la superposition ne sera pas appliquée complètement sur la vidéo source (elle sera recadrée). Cela s'applique aux ressources VoD ainsi qu'aux segments Live.</aside>
+    <p>Vous trouverez ci-dessous quelques solutions de contournement possibles lorsque la superposition est plus grande que la vidéo.</p>
+    <h3>Cas problématique</h3>
+    <p>Le schéma ci-dessous montre une superposition trop grande, avec le logo de l'entreprise dans le coin inférieur droit et donc masqué:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-problem-case.png" alt="Cas problématique"> <figcaption class="bcls-caption--image">Cas problématique</figcaption> </figure>
     <h4>Solution 1</h4>
-    <p>You could use the width and height fields to resize the image to fit the size of the video screen. The disadvantage of this is that resizing an image degrades the image quality, and will make the logo itself smaller:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-solution-1.png" alt="Solution 1">
-      <figcaption class="bcls-caption--image">Solution 1</figcaption>
-    </figure>
+    <p>Vous pouvez utiliser les champs largeur et hauteur pour redimensionner l'image en fonction de la taille de l'écran vidéo. L'inconvénient est que le redimensionnement d'une image dégrade la qualité de l'image et réduit la taille du logo lui-même:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-solution-1.png" alt="Solution 1"> <figcaption class="bcls-caption--image">Solution 1</figcaption> </figure>
     <h4>Solution 2</h4>
-    <p>If you move the logo to the upper-left corner, at least that will be assured visibility, but may not have a desirable placement:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-solution-2.png" alt="Solution 2">
-      <figcaption class="bcls-caption--image">Solution 2</figcaption>
-    </figure>
+    <p>Si vous déplacez le logo dans le coin supérieur gauche, la visibilité sera garantie, mais il se peut que l'emplacement ne soit pas souhaitable:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-solution-2.png" alt="Solution 2"> <figcaption class="bcls-caption--image">Solution 2</figcaption> </figure>
     <h4>Solution 3</h4>
-    <p>The <strong>ideal solution</strong> is to size your overlay to exactly match the resolution of the video (and check <strong>Use Original</strong> for the sizing):</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-solution-3.png" alt="Solution 3">
-      <figcaption class="bcls-caption--image">Solution 3</figcaption>
-    </figure>
-    <h5>Notes</h5>
+    <p>La solution<strong> idéale</strong> est de dimensionner votre incrustation pour qu'elle corresponde exactement à la résolution de la vidéo (et de cocher<strong> Utiliser l'original</strong> pour le dimensionnement):</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlay-solution-3.png" alt="Solution 3"> <figcaption class="bcls-caption--image">Solution 3</figcaption> </figure>
+    <h5>Remarques</h5>
     <ol>
-      <li>The image is overlaid before creation of individual output encodes (with their different resolutions and video quality). This means that if the underlying video is scaled for a particular output encode, then the image is similarly scaled.</li>
-      <li>The overlay image is inserted in all outputs, i.e, the overlays will also be visible on preview images seen on Cloud Playout UI. </li>
-    </ol>
-  </section>
-</article>
+      <li>L'image est superposée avant la création des codes de sortie individuels (avec leurs différentes résolutions et qualité vidéo). Cela signifie que si la vidéo sous-jacente est mise à l'échelle pour un encodage de sortie particulier, l'image est mise à l'échelle de la même manière.</li>
+      <li>L'image de superposition est insérée dans toutes les sorties, c'est-à-dire que les superpositions seront également visibles sur les images d'aperçu affichées sur l'interface utilisateur de Cloud Playout. </li>
+    </ol>  </section></article>

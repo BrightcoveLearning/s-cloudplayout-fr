@@ -1,82 +1,48 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="introduction">Introduction</h2>
-		<p>Before reading this topic, you should look at <a href="{{ site.cloud_playout_path }}enabling-server-side-ads.html">Monetizing Cloud Playout</a>, which covers enabling a Cloud Playout channel for SSAI and setting up pre-roll and post-roll ad insertion.</p>
-		<p>As you will see below, mid-roll ads work a bit differently.</p>
-  </section>
-	<section class="bcls-section">
-		<h2 id="overview">Overview</h2>
-		<p>Mid-roll ad insertions depend on cuepoints created for the video either through Studio or the CMS API. Cloud Playout imports the cuepoint data for the videos in the channel and sets mid-roll ad insertion points based on them.
-        For information on how to add cuepoints, see <a href="/media/working-cue-points-media-module.html">Working with Cue Points</a>.</p>
-	</section>
-	<section class="bcls-section">
-		<h2 id="Enabling_mid-roll_ad_cuepoints">Enabling mid-roll ad cuepoints</h2>
-		<p>Import of cuepoints for mid-roll ads can be enabled or disabled when you create the channel, or any time after that, regardless of the state of the channel:</p>
-		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/new-channel-with-ssai.png" alt="Enable Mid-Roll Ads">
-			<figcaption class="bcls-caption--image">Enable Mid-Roll Ads</figcaption>
-		</figure>
-	</section>
-	<section class="bcls-section">
-		<h2 id="How_mid-rolls_work_in_Cloud_Playout">How mid-rolls work in Cloud Playout</h2>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="introduction">Présentation</h2>
+		<p>Avant de lire cette rubrique, vous devriez consulter<a href="{{ site.cloud_playout_path }}enabling-server-side-ads.html"> Monétisation de la diffusion dans le cloud</a>, qui traite de l'activation d'un canal de diffusion dans le cloud pour SSAI et de la configuration de l'insertion d'annonces pré-roll et post-roll.</p>
+		<p>Comme vous le verrez ci-dessous, les annonces mid-roll fonctionnent un peu différemment.</p>  </section><section class="bcls-section">
+		<h2 id="overview">Aperçu</h2>
+		<p>Les insertions d'annonces mid-roll dépendent des points de repère créés pour la vidéo via Studio ou l'API CMS. Cloud Playout importe les données des points de repère des vidéos de la chaîne et définit les points d'insertion des publicités mid-roll en fonction de celles-ci. Pour plus d'informations sur la façon d'ajouter des points de repère, consultez la section<a href="/media/working-cue-points-media-module.html"> Utilisation des points de repère</a>.</p>  </section><section class="bcls-section">
+		<h2 id="Enabling_mid-roll_ad_cuepoints">Activation du mid-roll et des points de repère</h2>
+		<p>L'importation de points de repère pour les annonces mid-roll peut être activée ou désactivée lorsque vous créez la chaîne, ou à tout moment par la suite, quel que soit l'état de la chaîne:</p> <figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/new-channel-with-ssai.png" alt="Activer les annonces Mid-Roll"> <figcaption class="bcls-caption--image">Activer les annonces Mid-Roll</figcaption> </figure> </section> <section class="bcls-section">
+		<h2 id="How_mid-rolls_work_in_Cloud_Playout">Comment fonctionnent les mid-rolls dans Cloud Playout</h2>
 		<ul>
-			<li>Cloud Playout only sets ad positions based on ad cuepoints (code cuepoints are ignored).</li>
-			<li>The pre-roll and post-roll ad cuepoints automatically created by Video Cloud are ignored as pre-roll and post-roll ads are managed differently in Cloud Playout - see <a href="{{ site.cloud_playout_path }}enabling-server-side-ads.html#ads">Enabling Server-Side Ads</a>.</li>
-			<li>Only the timestamps for the ad cuepoints are used to determine mid-roll ad timings. Cuepoint metadata is ignored.</li>
+			<li>Cloud Playout définit uniquement les positions des annonces en fonction des points de repère publicitaires (les points de repère de code sont ignorés).</li>
+			<li>Les points de repère publicitaires pré-roll et post-roll créés automatiquement par Video Cloud sont ignorés car les publicités pre-roll et post-roll sont gérées différemment dans Cloud Playout - voir<a href="{{ site.cloud_playout_path }}enabling-server-side-ads.html#ads"> Activation des publicités côté serveur</a>.</li>
+			<li>Seuls les horodatages des points de repère publicitaires sont utilisés pour déterminer les horaires des publicités à mi-parcours. Les métadonnées du point de repère sont ignorées.</li>
 			<li>
-				The default duration for mid-roll is 30 seconds. This can be changed in the channel settings: minimum duration: 30 seconds; maximum duration: 10 minutes.
-				<p>The duration of mid-roll slots can be changed at any time, regardless of the channel state:</p>
-				<figure class="bcls-figure">
-					<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-cuepoints-running-state.png" alt="Edit Mid-Roll Slot Duration (RUNNING State)">
-					<figcaption class="bcls-caption--image">Edit Mid-Roll Slot Duration (RUNNING State)</figcaption>
-				</figure>
-				<aside class="bcls-aside bcls-aside--information">Notes:
+				La durée par défaut pour le mid-roll est de 30 secondes. Cela peut être modifié dans les paramètres du canal: durée minimale: 30 secondes&nbsp;; durée maximale: 10 minutes.
+				<p>La durée des créneaux mid-roll peut être modifiée à tout moment, quel que soit l'état du canal:</p> <figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-cuepoints-running-state.png" alt="Modifier la durée de l'emplacement Mid-Roll (RUNNING"> <figcaption class="bcls-caption--image">Modifier la durée du slot Mid-Roll (état RUNNING)</figcaption> </figure> <aside class="bcls-aside bcls-aside--information"> Remarques
 					<ul>
-						<li>The modified duration will not be applicable for the currently playing Ad slot. Subsequent Ad slots (within the same and subsequent videos) will use the modified Ad slot duration.</li>
-						<li>The Cloud Playout EPG is generated dynamically and as close to reality as possible. Changing the mid-roll duration may cause the EPG to show inaccurate schedules for a while, but it will auto-correct itself after a short period.</li>
-						<li>When Cloud Playout is currently playing an Ad (mid-roll or post-roll) and if a user attempts to use <strong>Play Now</strong> option to skip to another asset, the Ad will still continue to play until the programmed ad slot duration. During this time, the video that the user attempted to Play Now will be overwritten with the Ad for the remainder of the Ad slot duration. We recommend waiting for the completion of Ad before using the <strong>Play Now</strong> switch.</li>
-					</ul>
-					</aside>
+						<li>La durée modifiée ne s'appliquera pas à l'emplacement publicitaire en cours de lecteur. Les emplacements publicitaires suivants (dans la même vidéo et les suivantes) utiliseront la durée modifiée de l'emplacement publicitaire.</li>
+						<li>L'EPG Cloud Playout est généré de manière dynamique et aussi proche que possible de la réalité. La modification de la durée à mi-parcours peut entraîner l'affichage d'horaires inexacts sur l'EPG pendant un certain temps, mais il se corrigera automatiquement après une courte période.</li>
+						<li>Lorsque Cloud Playout diffuse actuellement une publicité (mid-roll ou post-roll) et si un utilisateur tente d'utiliser l'<strong>option</strong> Jouer maintenant pour passer à un autre élément, la publicité continuera à être lue jusqu'à la durée programmée de l'emplacement publicitaire. Pendant ce temps, la vidéo que l'utilisateur a essayé de lire maintenant sera écrasée par la publicité pour le reste de la durée de l'emplacement publicitaire. Nous vous recommandons d'attendre la fin de la publicité avant d'utiliser le<strong> commutateur</strong> Jouer maintenant.</li>
+					</ul> </aside>
 			</li>
-			<li>Mid-roll ads can only be inserted in VOD content, not in ad placeholders for <a href="{{ site.cloud_playout_path }}adding-bumpers-to-vod.html">bumpers</a> or <a href="{{ site.cloud_playout_path }}enabling-server-side-ads.html">pre-roll and post-roll ads</a>.</li>
-			<li>The start and end times, and the duration of assets in the program in the Cloud Playout UI and in the EPG, will reflect the mid-roll ad content.</li>
+			<li>Les annonces mid-roll ne peuvent être insérées que dans du contenu VOD, et non dans des espaces réservés<a href="{{ site.cloud_playout_path }}adding-bumpers-to-vod.html"> pour les annonces</a> spéciales ou les publicités<a href="{{ site.cloud_playout_path }}enabling-server-side-ads.html"> pre-roll et post-roll</a>.</li>
+			<li>Les heures de début et de fin, ainsi que la durée des ressources du programme dans l'interface utilisateur Cloud Playout et dans l'EPG, refléteront le contenu publicitaire mid-roll.</li>
 			<li>
-				Importing cuepoint data for mid-roll ads can be enabled or disabled at any time, regardless of the current state of the channel.
-				<figure class="bcls-figure">
-					<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-cuepoints-running-state.png" alt="Enable/Disable Mid-Rolls while Running">
-					<figcaption class="bcls-caption--image">Enable/Disable Mid-Rolls while Running</figcaption>
-				</figure>
-				<p><strong>Notes</strong></p>
+				L'importation de données de points de repère pour les publicités mid-roll peut être activée ou désactivée à tout moment, quel que soit l'état actuel de la chaîne. <figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-cuepoints-running-state.png" alt="Activer/désactiver les Mid-Rolls en cours d'exécution"> <figcaption class="bcls-caption--image">Activer/désactiver les Mid-Rolls en cours d'exécution</figcaption> </figure>
+				<p><strong>Remarques</strong></p>
 				<ol>
 					<li>
-						When a channel has mid-roll import option disabled and asset A is currently playing and it has mid-roll cue-points, and if the mid-roll import option is turned ON now on channel settings - the Ad slots in the current playing asset will not be honoured for the current iteration. However, mid-rolls for subsequent assets will be imported.
+						Lorsque l'option d'importation mid-roll d'une chaîne est désactivée et que la ressource A est en cours de lecteur et qu'elle possède des points de repère mid-roll, et si l'option d'importation mid-roll est activée maintenant dans les paramètres de la chaîne, les emplacements publicitaires de la ressource en cours de lecteur ne seront pas honorés pour l'itération en cours. Toutefois, les mid-roll pour les actifs suivants seront importés.
 					</li>
 					<li>
-						When a channel has mid-roll import option enabled and asset A is currently playing and it has mid-roll cue-points, and if the mid-roll import option is turned off now - the Ad slots in the current playing asset will be honoured on a best effort basis. Some Ad slots which are so nearly located to the playtime of the current playing asset might still play Ads.
+						Lorsque l'option d'importation mid-roll est activée sur une chaîne et que l'actif A est en cours de lecteur et qu'il a des points de repère mid-roll, et si l'option d'importation mid-roll est désactivée maintenant, les emplacements publicitaires de la ressource en cours de lecteur seront honorés au mieux. Certains emplacements publicitaires qui sont si proches de la durée de lecteur de la ressource de jeu actuelle peuvent toujours diffuser des publicités.
 					</li>
-          <li>Adding/removing cue-points to a currently playing asset is handled based on various factors. Factors such as current playtime position, existence of other mid-roll cue points etc., will influence the way Cloud Playout handles dynamic addition/removal of cue points of currently playing asset.</li>
+          <li>L'ajout/la suppression de points de repère à un actif en cours de lecteur est géré en fonction de divers facteurs. Des facteurs tels que la position de lecteur actuelle, l'existence d'autres points de repère à mi-parcours, etc., influenceront la façon dont Cloud Playout gère l'ajout/la suppression dynamique des points de repère de la ressource en cours de lecteur.</li>
 				</ol>
 			</li>
-		</ul>
-	</section>
-	<section class="bcls-section">
-		<h2 id="Identify assets with mid-rolls">Identify assets with mid-rolls</h2>
-		<p>If mid-roll cuepoint import has been enabled, videos with valid mid-roll cuepoints will have a green dotted icon next to the video title in the program:</p>
-		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-assets-with-midroll.png" alt="Videos with Mid-Roll Cuepoints">
-			<figcaption class="bcls-caption--image">Videos with Mid-Roll Cuepoints</figcaption>
-		</figure>
-		<p>If the channel is in a <strong>DRAFT</strong> state, you can hover the mouse over the green dotted icon to reveal the mid-roll details:</p>
-		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-draft-state.png" alt="Reveal Mid-Roll Details - DRAFT State">
-			<figcaption class="bcls-caption--image">Reveal Mid-Roll Details - DRAFT State</figcaption>
-		</figure>
-		<p>If the channel is in a <strong>RUNNING</strong> state, you can click the green dotted icon to reveal the mid-roll details:</p>
-		<figure class="bcls-figure">
-			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-running-state.png" alt="Reveal Mid-Roll Details - RUNNING State">
-			<figcaption class="bcls-caption--image">Reveal Mid-Roll Details - DRAFT State</figcaption>
-		</figure>
-	</section>
-</article>
+		</ul>  </section><section class="bcls-section">
+		<h2 id="Identify assets with mid-rolls">Identifier les actifs avec des mid-rolls</h2>
+		<p>Si l'importation des points de repère mid-roll a été activée, les vidéos avec des points de repère mid-roll valides seront accompagnées d'une icône en pointillés verts à côté du titre de la vidéo dans le programme:</p> <figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-assets-with-midroll.png" alt="Vidéos avec points de repère Mid-Roll"> <figcaption class="bcls-caption--image">Vidéos avec points de repère Mid-Roll</figcaption> </figure>
+		<p>Si le canal est à<strong> l'état</strong> BROUILLON, vous pouvez passer la souris sur l'icône en pointillés verts pour afficher les détails du mid-roll:</p> <figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-draft-state.png" alt="Afficher les détails du Mid-Roll - DRAFT"> <figcaption class="bcls-caption--image">Afficher les détails du Mid-Roll - DRAFT</figcaption> </figure>
+		<p>Si le canal est à<strong> l'état</strong> RUNNING, vous pouvez cliquer sur l'icône verte en pointillés pour afficher les détails du mid-roll:</p> <figure class="bcls-figure">
+			<img class="bcls-image" src="/assets/images/s-cloudplayout-img/mid-roll-running-state.png" alt="Détails du Mid-Roll Reveal - État"> <figcaption class="bcls-caption--image">Afficher les détails du Mid-Roll - DRAFT</figcaption> </figure> </section> </article> 

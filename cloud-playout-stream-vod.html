@@ -1,191 +1,128 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <aside class="bcls-aside bcls-aside--information">NOTE: In this topic, some of the steps are performed in {{ site.product_short }} Studio and some in {{ site.product_short }} Classic.</aside>
-
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>The Cloud Playout module enables broadcasters and media publishers to use a collection of VOD videos and live streams and then stream them as a linear channel. The channel can be streamed to Brightcove Live, Amazon S3 or a specified RTMP URL.</p>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <aside class="bcls-aside bcls-aside--information"> REMARQUE
+description: Dans cette rubrique, certaines étapes sont effectuées dans {{site.product_short}} Studio et d'autres dans {{site.product_short}} Classic.</aside> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Le module Cloud Playout permet aux diffuseurs et aux éditeurs de médias d'utiliser une collection de vidéos VOD et de flux en direct, puis de les diffuser en continu sous forme de canal linéaire. La chaîne peut être diffusée en continu vers Brightcove Live, Amazon S3 ou une URL RTMP spécifiée.</p>
     {% if site.product_short != 'Video Cloud' %}
-    <p>See <a href="/channels/{{ site.product_short }}-channels/creating-a-channel.html">Creating a {{ site.product_short }} Channel</a> to see how you add a Cloud Playout channel to your {{ site.product_short }} app.</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloud-playout-in-navigaton.png" alt="Go to Cloud Playout">
-      <figcaption class="bcls-caption--image">Creating a Cloud Playout Channel</figcaption>
-    </figure>
-    {% endif %}
-    <p>To access the Cloud Playout module, click <strong>Cloud Playout</strong> in the navigation menu. A list of all Cloud Playout channels that have been created will be displayed (if any).</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="playout channel list" src="/assets/images/s-cloudplayout-img/playout-channel-list.png" /></figure>
-    <p>The page will display the following information:</p>
+    <p>Consultez<a href="/channels/{{ site.product_short }}-channels/creating-a-channel.html"> Création d'une chaîne {{site.product_short}}</a> pour savoir comment ajouter une chaîne Cloud Playout à votre application {{site.product_short}}.</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloud-playout-in-navigaton.png" alt="Allez sur Cloud Playout"> <figcaption class="bcls-caption--image">Création d'une chaîne de diffusion dans le cloud</figcaption> </figure> {% endif %}
+    <p>Pour accéder au module Cloud Playout, cliquez sur<strong> Cloud Playout</strong> dans le menu de navigation. Une liste de toutes les chaînes Cloud Playout qui ont été créées s'affiche (le cas échéant).</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="liste des chaînes de diffusion" src="/assets/images/s-cloudplayout-img/playout-channel-list.png" /></figure>
+    <p>La page affichera les informations suivantes:</p>
     <ul>
-      <li><strong>Channel Name</strong> - Name of the channel</li>
-      <li><strong>Start Time</strong> - Start time for the channel</li>
-      <li><strong>End Time</strong> - End time for the channel</li>
-      <li><strong>Looping</strong> - Indicates whether the program will loop</li>
-      <li><strong>Destination</strong> - Target destination for the channel</li>
-      <li><strong>Date Created</strong> - Date the channel was created</li>
-      <li><strong>Last Updated</strong> - Date the channel was last updated</li>
-      <li><strong>Status</strong> - Channel status
+      <li><strong>Channel Name</strong>: nom de la chaîne</li>
+      <li><strong>Start Time</strong>: heure de début de la chaîne</li>
+      <li><strong>End Time</strong>: heure de fin de la chaîne</li>
+      <li><strong>Looping</strong> - Indique si le programme va tourner en boucle</li>
+      <li><strong>Destination</strong>: destination cible de la chaîne</li>
+      <li><strong>Date de création</strong>: date de création de la chaîne</li>
+      <li><strong>Last Updated</strong>: date de la dernière mise à jour de la chaîne</li>
+      <li><strong>Status</strong> - État de la chaîne
         <ul>
-          <li><strong>DRAFT</strong> - Channel has been created but not activated</li>
-          <li><strong>CREATING</strong> - Channel is in the process of being activated</li>
-          <li><strong>SCHEDULED</strong> - Channel is active and ready to stream</li>
-          <li><strong>STARTING</strong> - Channel starting process to begin streaming</li>
-          <li><strong>RUNNING</strong> - Channel is actively streaming</li>
-          <li><strong>STOPPING</strong> - Channel streaming is stopping</li>
-          <li><strong>IDLE</strong> - Channel successfully ran and has been stopped</li>
-          <li><strong>DELETING</strong> - Channel is being deleted</li>
-          <li><strong>ERROR</strong> - An error occurred while creating or activating the channel</li>
+          <li><strong>DRAFT</strong> - La chaîne a été créée mais n'a pas été activée</li>
+          <li><strong>CREATING</strong> - La chaîne est en cours d'activation</li>
+          <li><strong></strong>SCHEDULED - La chaîne est active et prête à être diffusée</li>
+          <li><strong>STARTING</strong> - Processus de démarrage de la chaîne pour commencer le streaming</li>
+          <li><strong>RUNNING</strong> - La chaîne diffuse activement</li>
+          <li><strong></strong>STOPPING - Le streaming des chaînes s'arrête</li>
+          <li><strong>IDLE</strong> - Le canal s'est exécuté avec succès et a été arrêté</li>
+          <li><strong></strong>DELETING - La chaîne est en train d'</li>
+          <li><strong>ERREUR</strong> - Une erreur s'est produite lors de la création ou de l'activation du canal</li>
         </ul>
       </li>
-    </ul>
-  </section>
-  <section class="bcls-section">
-    <h2 id="channel">Creating a channel</h2>
-    <p>To create a new Cloud Playout channel, follow these steps. </p>
+    </ul>  </section><section class="bcls-section">
+    <h2 id="channel">Création d'une chaîne</h2>
+    <p>Pour créer une nouvelle chaîne Cloud Playout, procédez comme suit. </p>
     <ol class="bcls-tasklist-restart" style="--s:1">
-      <li>Click <strong>Cloud Playout</strong> in the navigation header.</li>
+      <li>Cliquez sur<strong> Cloud Playout</strong> dans l'en-tête de navigation.</li>
       <li>
-        Click <span class="button-blue">Add New</span>:
+        Cliquez sur<span class="button-blue"> Ajouter nouveau</span>:
       </li>
-      <li>Enter the channel <strong>Identification</strong> details:
+      <li>Entrez les<strong> détails</strong> d'identification du canal:
         <ul>
-          <li><strong>Name</strong> - Name for the channel. The name must have English characters and the following special characters are allowed:   _ . : / = + - </li>
-          <li><strong>Description</strong> - Channel description</li>
-          <li><strong>Image URL</strong> - URL to an image file for the channel; meant to be a channel image that could be retrieved as part of the channel's metadata</li>
+          <li><strong>Nom</strong>: nom de la chaîne. Le nom doit contenir des caractères anglais et les caractères spéciaux suivants sont autorisés: Â _. :/ = + - </li>
+          <li><strong>
+description: description</strong> de la chaîne</li>
+          <li><strong>URL de l'image</strong>: URL d'un fichier image pour la chaîne&nbsp;; il s'agit d'une image de chaîne pouvant être récupérée dans le cadre des métadonnées de la chaîne</li>
         </ul>
       </li>
-      <li>Enter the channel <strong>Schedule</strong> details.
-        <aside class="bcls-aside bcls-aside--information language-editable">Note: the channel is created in the timezone of the user who creates it. If you will be deploying the channel in a region that has a different timezone, you will need to adjust the schedule for the difference between the two timezones.</aside>
+      <li>Entrez les<strong> détails de la</strong> programmation de la chaîne. <aside class="bcls-aside bcls-aside--information language-editable">Remarque: la chaîne est créée dans le fuseau horaire de l'utilisateur qui l'a créée. Si vous comptez déployer la chaîne dans une région dont le fuseau horaire est différent, vous devrez ajuster la programmation en fonction de la différence entre les deux fuseaux horaires.</aside>
         <ul>
-          <li><strong>Loop Playout Content</strong> - If <strong>On</strong>, the program will be played in a loop and the <strong>End Date/Time</strong> will be enabled. The program can still be modified at any time and the changes will be reflected in the current program and the loops to follow. See the <a href="#looping">Creating a looping program</a> section below.</li>
-          <li><strong>Ad Insertion</strong> - If on, allows ads to be displayed during channel playback. If this option is selected, you can only output to a <strong>Brightcove Live Event</strong> or <strong>Amazon S3 Bucket</strong>. See <a href="{{ site.cloud_playout_path }}enabling-server-side-ads.html">Monetizing Content</a>.</li>
-          <li>
-            <strong>Start Date/Time</strong> - Time when the channel will start playing out. The start time for all assets will be calculated by adding their duration to this start time. This time can be updated only when the channel is not in running state.
-            <aside class="bcls-aside bcls-aside--warning language-editable">Note: it takes 1-2 minutes for the initial startup of a channel, so if the start is time-sensitive, schedule it for 2 minutes before the time you want to initiate playback.</aside>
+          <li><strong>Contenu de lecteur en boucle</strong> - Si cette option est<strong> activée</strong>, le programme sera lu en boucle et la date/heure de<strong> fin</strong> sera activée. Le programme peut toujours être modifié à tout moment et les modifications seront reflétées dans le programme actuel et les boucles à suivre. Consultez la<a href="#looping"> section</a> Création d'un programme en boucle ci-dessous.</li>
+          <li><strong>Insertion d'annonces</strong>: si cette option est activée, les annonces peuvent être affichées pendant la lecteur de la chaîne Si cette option est sélectionnée, vous pouvez uniquement effectuer une sortie vers un<strong> Brightcove Live Event</strong> ou un compartiment<strong> Amazon S3</strong>. Consultez la section<a href="{{ site.cloud_playout_path }}enabling-server-side-ads.html"> Monétisation du contenu</a>.</li>
+          <li> <strong>Date/Heure de début</strong>: heure à laquelle la chaîne commencera à être diffusée. L'heure de début de tous les actifs sera calculée en ajoutant leur durée à cette heure de début. Cette heure ne peut être mise à jour que lorsque le canal n'est pas en cours d'exécution. <aside class="bcls-aside bcls-aside--warning language-editable">Remarque: le démarrage initial d'une chaîne prend 1 à 2 minutes. Par conséquent, si le démarrage est urgent, programmez-le 2 minutes avant l'heure à laquelle vous souhaitez lancer la lecteur.</aside>
           </li>
-          <li><strong>End Date/Time</strong> - If no value is entered and <strong>Loop Playout Content</strong> is not selected, the stream will end once the playout is complete. If <strong>Loop Playout Content</strong> is selected and there is no <strong>End Date/Time</strong>, the playout will be streamed until the channel is stopped. This time can be updated at any time.</li>
+          <li><strong>Date/Heure de fin</strong> - Si aucune valeur n'est entrée et que le contenu de lecteur en<strong> boucle n'</strong>est pas sélectionné, le flux se terminera une fois la diffusion terminée. Si<strong> Loop Playout Content</strong> est sélectionné et qu'il n'y a pas de date/heure de<strong> fin</strong>, la diffusion sera diffusée en continu jusqu'à ce que la chaîne soit arrêtée. Cette heure peut être mise à jour à tout moment.</li>
         </ul>
       </li>
-      <li>If you will be using Live inputs, set <strong>Live Input</strong> to On, and enter a Slate URL, unless you are going to use the default Brightcove MP4 for you slate. The slate MP4 will play whenever Live input is stopped because the encoder is stopped or some technical issue blocks the live stream. <strong>Note that <strong>the Slate URL must be a static URL that is always available</strong> (short-lived CDN URLs are not allowed).</strong></li>
+      <li>Si vous comptez utiliser des entrées Live, définissez<strong> Live Input</strong> sur On et saisissez une URL Slate, sauf si vous allez utiliser le MP4 Brightcove par défaut pour votre ardoise. L'ardoise MP4 sera lue chaque fois que l'entrée Live est arrêtée parce que l'encodeur est arrêté ou qu'un problème technique bloque le flux en direct. <strong>Notez que<strong> l'URL Slate doit être une URL statique toujours disponible</strong> (les URL CDN de courte durée ne sont pas autorisées).</strong></li>
       <li>
-        Import closed captions is enabled by default; if you do not want to import captions, disable it now or while the channel is in DRAFT state:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/import-captions.png" alt="Import Captions">
-          <figcaption class="bcls-caption--image">Import Captions</figcaption>
-        </figure>
+        L'option Importer des sous-titres codés est activée par défaut&nbsp;; si vous ne souhaitez pas importer de sous-titres, désactivez-la maintenant ou lorsque la chaîne est à l'état BROUILLON: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/import-captions.png" alt="Importer des légendes"> <figcaption class="bcls-caption--image">Importer des légendes</figcaption> </figure>
       </li>
       <li>
-        {% if site.product_short != 'Video Cloud' %}
-        Enter the channel <strong>Destination</strong> details. For channels to work in {{ site.product_short }} apps, you must select <strong>Brightcove Live Event</strong> as the destination.
-        {% endif %}
+        {% if site.product_short != 'Video Cloud' %} Entrez les<strong> détails de la</strong> destination de la chaîne. Pour que les chaînes fonctionnent dans les applications {{site.product_short}}, vous devez sélectionner<strong> Brightcove Live Event</strong> comme destination. {% endif %}
         <ul>
-          <li><strong>Optimize Display for</strong> - Controls the bitrate and dimensions for the output
+          <li><strong>Optimize Display for</strong> - Contrôle le débit binaire et les dimensions de la sortie
             <ul>
-              <li><strong>Mobile &amp; Web</strong> - If checked, HD Output (RTMP or HLS single bitrate)</li>
-              <li><strong>Smart TV</strong> - If checked, full HD Output (RTMP or HLS single bitrate)</li>
+              <li><strong>Mobile &amp; Web</strong> - Si coché, sortie HD (débit binaire unique RTMP ou HLS)</li>
+              <li><strong>Smart TV</strong> - Si coché, sortie Full HD (débit binaire unique RTMP ou HLS)</li>
             </ul>
           </li>
-          <li><strong>Output Region</strong> - The region where the channel will be created. Brightcove recommends selecting a region geographically closest to where the majority of your audience is expected.</li>
-          <li><strong>Output to</strong> - Select an output method for the channel
+          <li><strong>Output Region</strong> (Région de sortie): région dans laquelle le canal sera créé. Brightcove recommande de sélectionner la région la plus proche géographiquement de l'endroit où la majorité de votre public est attendue.</li>
+          <li><strong>Sortie vers</strong>: sélectionnez une méthode de sortie pour le canal
             <ul>
-              <li><strong>Brightcove Live Event</strong> - Create or use a previously created Brightcove Live Channel. When creating a new channel, the region of the channel will be optimized based upon the <strong>Output Region</strong> that was selected.
-                <aside class="bcls-aside bcls-aside--information language-editable">If you are using Brightcove Live, you can also set the destination as a redundant group to get automatic failover for uninterrupted, reliable playback. See <a href="/cloud-playout/channel-live-redundancy.html">Using Live Redundancy with Channels</a> for more details.</aside>
+              <li><strong>Brightcove Live Event</strong>: créez ou utilisez une chaîne en direct Brightcove créée précédemment. Lors de la création d'un nouveau canal, la région du canal sera optimisée en fonction<strong> de la région</strong> de sortie sélectionnée. <aside class="bcls-aside bcls-aside--information language-editable">Si vous utilisez Brightcove Live, vous pouvez également définir la destination en tant que groupe redondant pour bénéficier d'un basculement automatique pour une lecteur fiable et ininterrompue. Pour plus de détails, consultez<a href="/cloud-playout/channel-live-redundancy.html"> Utilisation de la redondance</a> en direct avec les canaux.</aside>
               </li>
-              <li>
-                <strong>RTMP</strong>
-                {% if site.product_short != 'Video Cloud' %}
-                <aside class="bcls-aside bcls-aside--warning language-editable">This destination is <strong>not compatible with {{ site.product_short }}.</strong></aside>
-                {% endif %}
+              <li> <strong>RTMP</strong> {% if site.product_short != 'Video Cloud' %}<aside class="bcls-aside bcls-aside--warning language-editable"> Cette destination<strong> n'est pas compatible avec {{site.product_short}}. </strong></aside>{% endif %}
               </li>
-              <li><strong>Amazon S3 Bucket </strong> - You can select this destination <strong>in addition to Brightcove Live Event, but not as the only destination</strong>. This option will push an HLS output to an Amazon S3 bucket. You will be required to enter Bucket Name, Region, Access Key and Secret Key. The bucket should be public and writeable.</li>
-            </ul>
-            <aside class="bcls-aside bcls-aside--information">Note that outputting to <strong>Brightcove Live Event</strong> will automatically generate live hours for your account, which are billable. There is no addition charge for using Cloud Playout, but normal charges for live streaming hours apply.
-            </aside>
+              <li><strong>Bucket Amazon S3</strong>: vous pouvez sélectionner cette destination<strong> en plus de Brightcove Live Event, mais pas comme seule destination</strong>. Cette option envoie une sortie HLS vers un compartiment Amazon S3. Vous devrez saisir le nom du compartiment, la région, la clé d'accès et la clé secrète. Le compartiment doit être public et inscriptible.</li>
+            </ul> <aside class="bcls-aside bcls-aside--information">Notez que la sortie vers<strong> Brightcove Live Event</strong> générera automatiquement des heures en direct pour votre compte, qui sont facturables. Il n'y a pas de frais supplémentaires pour l'utilisation de Cloud Playout, mais des frais normaux pour les heures de diffusion en direct s'appliquent. </aside>
           </li>
         </ul>
       </li>
-      <li>Click <img src="/assets/images/s-cloudplayout-img/cloudplayout-create-channel.png" alt="create channel" class="ui-image">. The new channel will be created with a status of <strong>DRAFT</strong>.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="add_content">Adding content to a channel</h2>
-    <p>See <a href="{{ site.cloud_playout_path }}cloud-playout-add-content.html">Managing the Channel Program</a> for information on how to add VOD content, playlists, and live events to your channel.</p>
-    <p>Also see:</p> 
+      <li>Cliquez <img src="/assets/images/s-cloudplayout-img/cloudplayout-create-channel.png" alt="créer une chaîne" class="ui-image">. La nouvelle chaîne sera créée avec le statut<strong> DRAFT</strong>.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="add_content">Ajout de contenu à une chaîne</h2>
+    <p>Consultez<a href="{{ site.cloud_playout_path }}cloud-playout-add-content.html"> Gérer le programme des chaînes</a> pour savoir comment ajouter du contenu VOD, des listes de lecteur et des événements en direct à votre chaîne.</p>
+    <p>Voir également:</p> 
     <ul>
-      <li><a href="{{ site.cloud_playout_path }}static-image-overlays.html">Adding Static Image Overlays</a></li>
+      <li><a href="{{ site.cloud_playout_path }}static-image-overlays.html">Ajout de superpositions d'images statiques</a></li>
       <!-- <li><a href="{{ site.cloud_playout_path }}static-image-overlays.html">Adding Dynamic Overlays</a></li> -->
-      <li><a href="{{ site.cloud_playout_path }}adding-bumpers-to-vod.html">Adding Bumpers to Content</a></li>
+      <li><a href="{{ site.cloud_playout_path }}adding-bumpers-to-vod.html">Ajout de pare-chocs au contenu</a></li>
     </ul>
-    <p>After videos and live events have been added to a channel, click <strong>Activate</strong> to activate the channel. A channel must be activated before streaming can begin. See the <a href="{{ site.cloud_playout_path }}using-channel-actions.html">Using channel actions</a> for more information.</p>
-    <aside class="bcls-aside bcls-aside--information">Note: To change the order of the videos in a program, click on a video and drag it to a new position.</aside>
-    <p>When videos are added to a channel, a system-generated playlist will be created and visible in the Media module.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/s-cloudplayout-img/playout-playlist-created.png" /></figure>
-    <p>We strongly recommend that you make any changes to the channel in the Cloud Playout module, and <strong>do not edit the generated playlist in any way</strong>.</p>
-  </section>
-  
-  <section class="bcls-section">
-    <h2 id="getting_the_rtmp_ingest_point">Getting the RTMP ingest point</h2>
-    <aside class="bcls-aside bcls-aside--information language-editable">This section only applies if you are including live events in your channel.</aside>
-    <p>For your live encoder, you will need the RTMP ingest point for your channel. You can find it in the <strong>:Channel Settings</strong>:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-rtmp-ingest-point.png" alt="Ingest Point">
-      <figcaption class="bcls-caption--image">Ingest Point</figcaption>
-    </figure>
-    <aside class="bcls-aside bcls-aside--warning language-editable">
-      Please note that Cloud Playout uses a CNAME mapping for the ingest point but in rare cases this mapping may not be complete and the channel may temporarily show an IP Address. Check the channel settings before starting a live stream to the channel and wait until the Ingest Point shows a CNAME if you see an IP address such as the one below:
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/cloud-playout/ingest-point-ip-address.png" alt="Ingest Point with IP Address">
-        <figcaption class="bcls-caption--image">Ingest Point with IP Address</figcaption>
-      </figure>
-    </aside>
+    <p>Une fois que les vidéos et les événements en direct ont été ajoutés à une chaîne, cliquez sur<strong> Activer</strong> pour activer la chaîne. Une chaîne doit être activée avant que le streaming puisse commencer. Pour plus d'informations, consultez la section<a href="{{ site.cloud_playout_path }}using-channel-actions.html"> Utilisation</a> des actions de chaîne.</p> <aside class="bcls-aside bcls-aside--information">Remarque: Pour modifier l'ordre des vidéos d'un programme, cliquez sur une vidéo et faites-la glisser vers une nouvelle position.</aside>
+    <p>Lorsque des vidéos sont ajoutées à une chaîne, une liste de lecteur générée par le système est créée et visible dans le module Médias.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapports" src="/assets/images/s-cloudplayout-img/playout-playlist-created.png" /></figure>
+    <p>Nous vous recommandons vivement d'apporter des modifications à la chaîne dans le module Cloud Playout et de<strong> ne pas modifier la playlist générée de quelque manière que ce soit</strong>.</p>  </section><section class="bcls-section">
+    <h2 id="getting_the_rtmp_ingest_point">Obtenir le point d'entrée RTMP</h2> <aside class="bcls-aside bcls-aside--information language-editable">Cette section s'applique uniquement si vous incluez des événements en direct dans votre chaîne.</aside>
+    <p>Pour votre encodeur en direct, vous aurez besoin du point d'entrée RTMP de votre canal. Vous pouvez le trouver dans le:Channel<strong> Settings:</strong></p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-rtmp-ingest-point.png" alt="Point d'ingestion"> <figcaption class="bcls-caption--image">Point d'ingestion</figcaption> </figure> <aside class="bcls-aside bcls-aside--warning language-editable"> Veuillez noter que Cloud Playout utilise un mappage CNAME pour le point d'ingestion, mais dans de rares cas, ce mappage peut ne pas être complet et le canal peut afficher temporairement une adresse IP. Vérifiez les paramètres du canal avant de démarrer une diffusion en direct sur le canal et attendez que le point d'ingestion affiche un CNAME si vous voyez une adresse IP telle que celle ci-dessous: <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/cloud-playout/ingest-point-ip-address.png" alt="Point d'ingestion avec adresse IP"> <figcaption class="bcls-caption--image">Point d'ingestion avec adresse IP</figcaption> </figure> </aside>
 
-    <p>Depending on the encoder you are using, you may need to enter both the RTMP ingest point and the stream name. The stream name for the channel is the <strong>Channel ID</strong>, which is also the last part of the Ingest Point address.</p>
-    <aside class="bcls-aside bcls-aside--information">Note that if you are using the OBS software encoder, you will need to specify a <strong>Custom...</strong> service, and will need to input a <strong>Server</strong> and <strong>Stream Key</strong>. The <strong>Server</strong> will be the first part of the <strong>Ingest Point</strong>, and the <strong>Steam Key</strong> will be the remaining part, as shown in the example below:
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloud-playout-key-for-obs.png" alt="Cloud Playout Ingest Point">
-        <figcaption class="bcls-caption--image">Cloud Playout Ingest Point</figcaption>
-      </figure>
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-obs-setup.png" alt="OBS Setup">
-        <figcaption class="bcls-caption--image">OBS Setup</figcaption>
-      </figure>
-    </aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="edit_delete">Editing a channel</h2>
-    <h3>For channels in DRAFT or SCHEDULED state</h3>
-    <p>To edit a draft or scheduled Cloud Playout channel:</p>
+    <p>Selon l'encodeur que vous utilisez, vous devrez peut-être entrer à la fois le point d'entrée RTMP et le nom du flux. Le nom du flux du canal est l'ID du<strong> canal</strong>, qui est également la dernière partie de l'adresse du point d'ingestion.</p> <aside class="bcls-aside bcls-aside--information">Notez que si vous utilisez l'encodeur logiciel OBS, vous devrez spécifier une option<strong> personnalisée... </strong>et vous devrez saisir une clé de<strong> serveur</strong> et de<strong> flux</strong>. Le<strong> serveur</strong> sera la première partie du point<strong> d'</strong>entrée et la clé<strong> Steam</strong> sera la partie restante, comme indiqué dans l'exemple ci-dessous: <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloud-playout-key-for-obs.png" alt="Point d'ingestion Cloud Playout"> <figcaption class="bcls-caption--image">Point d'ingestion Cloud Playout</figcaption> </figure> <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-obs-setup.png" alt="Configuration d'OBS"> <figcaption class="bcls-caption--image">Configuration d'OBS</figcaption> </figure> </aside> </section> <section class="bcls-section">
+    <h2 id="edit_delete">Modifier une chaîne</h2>
+    <h3>Pour les chaînes en état DRAFT ou SCHEDU</h3>
+    <p>Pour modifier un brouillon ou une chaîne Cloud Playout programmée:</p>
     <ol class="bcls-tasklist-restart">
-      <li>Click the channel name to open the channel details.</li>
-      <li>Click <img src="/assets/images/s-cloudplayout-img/cloudplayout-edit-button.png" class="ui-image" alt="edit button"></li>
-      <li>Make the appropriate edits in the dialog and then click <img src="/assets/images/s-cloudplayout-img/cloudplayout-update-channel.png" alt="update channel" class="ui-image"></li>
+      <li>Cliquez sur le nom de la chaîne pour ouvrir les détails de la chaîne.</li>
+      <li>Cliquez <img src="/assets/images/s-cloudplayout-img/cloudplayout-edit-button.png" class="ui-image" alt="bouton d'édition"></li>
+      <li>Apportez les modifications appropriées dans la boîte de dialogue, puis cliquez sur <img src="/assets/images/s-cloudplayout-img/cloudplayout-update-channel.png" alt="canal de mise à" class="ui-image"></li>
     </ol>
-    <p>Note that the Destination properties cannot be edited once a channel has been created.</p>
-    <h3>For a running channel</h3>
-    <p>To edit a running channel: </p>
+    <p>Notez que les propriétés de destination ne peuvent pas être modifiées une fois qu'un canal a été créé.</p>
+    <h3>Pour une chaîne en cours</h3>
+    <p>Pour modifier une chaîne en cours d'exécution: </p>
     <ol class="bcls-tasklist-restart">
-      <li>Click the channel name to open the channel details.</li>
-      <li>Click <img src="/assets/images/s-cloudplayout-img/cloudplayout-settings.png" alt="settings" class="ui-image"></li>
-      <li>Click <img src="/assets/images/s-cloudplayout-img/cloudplayout-edit-button.png" class="ui-image" alt="edit button"></li>
-      <li>The channel settings dialog will open - some options that can't be changed will not be available.</li>
-      <li>Make changes and click <img src="/assets/images/s-cloudplayout-img/cloudplayout-update-channel.png" alt="update channel" class="ui-image"></li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="looping">Creating a looping program</h2>
-    <p>To create a program that loops, when creating the channel, set the <strong>Loop Playout Content</strong> setting to <strong>On</strong>. As videos are added to the program, the program listing will update to display the series of videos with associated start/end times to fill the entire channel scheduled time. When you change the duration of a live event, the duration of events that have already passed will remain unchanged, but any future plays of the event will use the new duration.</p>
-    <p>In the example below, the channel includes VOD and live events in a loop.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="report switcher" src="/assets/images/s-cloudplayout-img/cloudplayout-looping-channel.png" /></figure>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="epg">Working with an electronic program guide</h2>
-    <p>Brightcove generates the EPG for Cloud Playout channels and {{ site.product_short }} will handle that for you.</p>
-    <p>If you want to see the program data for the EPG, an API is available to retrieve the EPG. For more information see the <a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html">Overview: EPG API</a> topic.</p>
-  </section>
-
-  <section class="bcls-section">
-    <h2 id="deleting_a_channel">Deleting a channel</h2>
-    <p>To delete a Cloud Playout channel, click the checkbox next to the channel name and then click <strong>Delete</strong>.</p>
-  </section>
-</article>
+      <li>Cliquez sur le nom de la chaîne pour ouvrir les détails de la chaîne.</li>
+      <li>Cliquez <img src="/assets/images/s-cloudplayout-img/cloudplayout-settings.png" alt="paramètres" class="ui-image"></li>
+      <li>Cliquez <img src="/assets/images/s-cloudplayout-img/cloudplayout-edit-button.png" class="ui-image" alt="bouton d'édition"></li>
+      <li>La boîte de dialogue des paramètres de canal s'ouvre. Certaines options qui ne peuvent pas être modifiées ne sont pas disponibles.</li>
+      <li>Apportez les modifications et cliquez sur <img src="/assets/images/s-cloudplayout-img/cloudplayout-update-channel.png" alt="canal de mise à" class="ui-image"></li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="looping">Création d'un programme en boucle</h2>
+    <p>Pour créer un programme en boucle, lors de la création de la chaîne, définissez le<strong> paramètre Contenu de lecteur en</strong> boucle<strong> sur Activé</strong>. Au fur et à mesure que des vidéos sont ajoutées au programme, la liste des programmes sera mise à jour pour afficher la série de vidéos avec les heures de début et de fin associées afin de remplir toute la durée programmée de la chaîne. Lorsque vous modifiez la durée d'un événement en direct, la durée des événements déjà terminés reste inchangée, mais toutes les parties futures de l'événement utiliseront la nouvelle durée.</p>
+    <p>Dans l'exemple ci-dessous, la chaîne inclut la VOD et les événements en direct en boucle.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="commutateur de rapports" src="/assets/images/s-cloudplayout-img/cloudplayout-looping-channel.png" /></figure>  </section><section class="bcls-section">
+    <h2 id="epg">Utilisation d'un guide électronique des programmes</h2>
+    <p>Brightcove génère l'EPG pour les chaînes Cloud Playout et {{site.product_short}} s'en chargera pour vous.</p>
+    <p>Si vous souhaitez voir les données du programme pour l'EPG, une API est disponible pour récupérer l'EPG. Pour plus d'informations, voir la<a href="https://apis.support.brightcove.com/cloud-playout-apis/getting-started/overview-epg-api.html"> vue d'ensemble: </a>Rubrique de l'API EPG.</p>  </section><section class="bcls-section">
+    <h2 id="deleting_a_channel">Suppression d'une chaîne</h2>
+    <p>Pour supprimer une chaîne Cloud Playout, cochez la case en regard du nom de la chaîne, puis cliquez sur<strong> Supprimer</strong>.</p>  </section></article>

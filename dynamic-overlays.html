@@ -1,122 +1,87 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <p>Also see <a href="{{ site.cloud_playout_path }}static-image-overlays.html">Adding Static Image Overlays</a>.</p>
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>You can use the dynamic overlays (Motion Graphics) feature to superimpose a motion image onto the video in a Cloud Playout channel. The dynamic overlay is based on an HTML5 motion graphic asset.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Implementation">Implementation</h2>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary>
+  <p>Consultez également la section<a href="{{ site.cloud_playout_path }}static-image-overlays.html"> Ajout de superpositions d'images statiques</a>.</p> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Vous pouvez utiliser la fonctionnalité de superposition dynamique (animations graphiques) pour superposer une image animée à la vidéo dans un canal Cloud Playout. La superposition dynamique est basée sur une ressource graphique animée HTML5.</p>  </section><section class="bcls-section">
+    <h2 id="Implementation">Mise en</h2>
     <ol class="bcls-tasklist-restart">
       <li>
-        To set up for dynamic overlay, enable the option while creating a Cloud Playout channel. You can toggle this option only when a channel is in DRAFT state:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/enable-dynamic-overlays.png" alt="Enable Dynamic Overlays">
-          <figcaption class="bcls-caption--image">Enable Dynamic Overlays</figcaption>
-        </figure>
+        Pour configurer la superposition dynamique, activez l'option lors de la création d'une chaîne Cloud Playout. Vous pouvez activer cette option uniquement lorsqu'un canal est à l'état BROUILLON: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/enable-dynamic-overlays.png" alt="Activer les superpositions dynamiques"> <figcaption class="bcls-caption--image">Activer les superpositions dynamiques</figcaption> </figure>
       </li>
       <li>
-        Then you choose an HTML5 authoring system. Use this authoring system to prepare an HTML5 asset, and you must continually publish the asset to a location outside of Cloud Playout.
+        Ensuite, vous choisissez un système de création HTML5. Utilisez ce système de création pour préparer une ressource HTML5, et vous devez continuellement la publier dans un emplacement en dehors de Cloud Playout.
         <ul>
-          <li>It can be any HTML5 authoring system that uses standard browser-based rendering techniques.</li>
-          <li>It can use any HTML5 tags except video and audio.</li>
-          <li>Publish the dynamic overlay asset to a source URL that is accessible via a public IP address. Assets protected by credentials are not accepted.</li>
-          <li><strong>Remember that the URL should be valid, accessible and should be returning a HTML content with content-type text/html.</strong></li>
+          <li>Il peut s'agir de n'importe quel système de création HTML5 qui utilise des techniques de rendu standard basées sur un navigateur.</li>
+          <li>Il peut utiliser toutes les balises HTML5 à l'exception de la vidéo et de l'audio.</li>
+          <li>Publiez la ressource de superposition dynamique sur une URL source accessible via une adresse IP publique. Les actifs protégés par des informations d'identification ne sont pas acceptés.</li>
+          <li><strong>N'oubliez pas que l'URL doit être valide, accessible et doit renvoyer un contenu HTML avec du texte/html de type contenu.</strong></li>
         </ul>
       </li>
       <li>
-        Add the HTML5 authoring asset to your account using the <strong>Overlays</strong> page:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-dynamic-overlay-to-account.png" alt="Add HTML5 Asset">
-          <figcaption class="bcls-caption--image">Add HTML5 Asset</figcaption>
-        </figure>
+        Ajoutez la ressource de création HTML5 à votre compte à l'aide de la<strong> page</strong> Overlays: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-dynamic-overlay-to-account.png" alt="Ajouter un actif HTML5"> <figcaption class="bcls-caption--image">Ajouter un actif HTML5</figcaption> </figure>
       </li>
       <li>
-        The Dynamic Overlay can then be associated with a channel:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlays-for-channel-button.png" alt="Add Channel Overlays">
-          <figcaption class="bcls-caption--image">Add Channel Overlays</figcaption>
-        </figure>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/dynamic-overlays-for-channel.png" alt="Overlays for Channel">
-          <figcaption class="bcls-caption--image">Overlays for Channel</figcaption>
-        </figure>
+        La superposition dynamique peut ensuite être associée à un canal: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/overlays-for-channel-button.png" alt="Ajouter des superpositions de canaux"> <figcaption class="bcls-caption--image">Ajouter des superpositions de canaux</figcaption> </figure> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/dynamic-overlays-for-channel.png" alt="Superpositions pour canal"> <figcaption class="bcls-caption--image">Superpositions pour canal</figcaption> </figure>
       </li>
       <li>
-        You can configure each dynamic overlay with a start time and duration:
+        Vous pouvez configurer chaque superposition dynamique avec une heure et une durée de début:
         <ul>
-          <li>The duration when specified, should be a maximum of 24 hours. If left empty, that is considered as 24*7 and the overlay will continue to be shown until deactivated.</li>
-          <li>The Start time must always be a future time.</li>
-          <li>Use Current time if you want to start it immediately. Note that this option is useful only when the channel is currently running.</li>
+          <li>La durée, lorsqu'elle est spécifiée, doit être d'un maximum de 24 heures. S'il est laissé vide, il est considéré comme 24*7 et la superposition continuera d'être affichée jusqu'à ce qu'elle soit désactivée.</li>
+          <li>L'heure de début doit toujours être une heure future.</li>
+          <li>Utilisez Heure actuelle si vous souhaitez le démarrer immédiatement. Notez que cette option n'est utile que lorsque le canal est en cours d'exécution.</li>
         </ul>
       </li>
-    </ol>
-    
-  </section>
-  <section class="bcls-section">
-    <h2 id="State_transitions">State transitions</h2>
-    <p>State transitions for overlay schedules</p>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="State_transitions">Transitions étatiques</h2>
+    <p>Transitions d'état pour les calendriers</p>
     <ul>
-      <li>
-        <strong>INACTIVE</strong>
+      <li> <strong>INACTIF</strong>
         <ul>
-          <li>A newly created schedule (or)</li> 
-          <li>A schedule that has already completed the run (or)</li>
-          <li>A schedule that is already deactivated.</li> 
-          <li>You can change the start time to bring it back to SCHEDULED state with the same or updated overlay configuration.</li>
-          <li>Delete - if you will no longer use this configuration.</li>
-          <li>Modify for any configuration changes.</li>
+          <li>Un calendrier nouvellement créé (ou)</li> 
+          <li>Un programme qui a déjà terminé l'exécution (ou)</li>
+          <li>Une planification déjà désactivée.</li> 
+          <li>Vous pouvez modifier l'heure de début pour la ramener à l'état SCHEDULED avec la même configuration de superposition ou une configuration mise à jour.</li>
+          <li>Supprimer: si vous n'utilisez plus cette configuration.</li>
+          <li>Modifiez pour toute modification de configuration.</li>
         </ul>
       </li>
-      <li>
-        <strong>SCHEDULED</strong>
+      <li> <strong>PROGRAMMÉ</strong>
         <ul>
-          <li>Scheduled to start at the specified start time.</li> 
-          <li>Delete if you no longer need this schedule.</li>
-          <li>Modify for any configuration changes.</li> 
+          <li>Démarrage programmé à l'heure de début spécifiée.</li> 
+          <li>Supprimez-le si vous n'avez plus besoin de ce calendrier.</li>
+          <li>Modifiez pour toute modification de configuration.</li> 
         </ul>
       </li>
-      <li>
-        <strong>ACTIVE</strong>
+      <li> <strong>ACTIF</strong>
         <ul>
-          <li>A schedule that is currently in progress.</li> 
-          <li>Deactivate when you need to stop the overlay.</li>
-          <li>Modify any configuration except layer and start_time.</li> 
-          <li>Deletion not allowed. You need to deactivate first.</li>
+          <li>Un calendrier actuellement en cours.</li> 
+          <li>Désactivez-le lorsque vous devez arrêter la superposition.</li>
+          <li>Modifiez n'importe quelle configuration sauf layer et start_time.</li> 
+          <li>La suppression n'est pas autorisée. Vous devez d'abord désactiver.</li>
         </ul>
       </li>
-    </ul>
-    <aside class="bcls-aside bcls-aside--information language-editable">You can edit the overlays at any time. However, the start time cannot be changed for an ACTIVE overlay. You can still change the image itself on an active overlay.</aside>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Contextual_Overlay_Launch">Contextual Launch point</h2>
-    <p>For ease of access, if you want the overlay to appear for a specific video in the playlist, you can mouse hover the video in the playlist and click on the <strong>Add Overlay icon</strong> ( <img src="/assets/images/s-cloudplayout-img/overlay-icon.svg" alt="overlay icon"> ), the UI will launch the Add Overlays modal, with the start time and duration of the selected video.</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-overlay-to-particular-videos.png" alt="Add Overlay to Specific Video">
-      <figcaption class="bcls-caption--image">Add Overlay to Specific Video</figcaption>
-    </figure>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-dynamic-overlay-to-channel.png" alt="Set Overlay Properties">
-      <figcaption class="bcls-caption--image">Set Overlay Properties</figcaption>
-    </figure>
-    <h3>Notes</h3>
+    </ul> <aside class="bcls-aside bcls-aside--information language-editable">Vous pouvez modifier les incrustations à tout moment. Toutefois, l'heure de début ne peut pas être modifiée pour une superposition ACTIVE. Vous pouvez toujours modifier l'image elle-même sur une superposition active.</aside> </section> <section class="bcls-section">
+    <h2 id="Contextual_Overlay_Launch">Point de lancement contextuel</h2>
+    <p>Pour faciliter l'accès, si vous souhaitez que l'incrustation apparaisse pour une vidéo spécifique de la liste de lecteur, vous pouvez passer la souris sur la vidéo dans la liste de lecteur et cliquer sur l'icône<strong> Ajouter une superposition</strong> ( <img src="/assets/images/s-cloudplayout-img/overlay-icon.svg" alt="icône de superposition"> ), l'interface utilisateur lancera la fenêtre modale Ajouter des superpositions, avec l'heure de début et la durée de la vidéo sélectionnée.</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-overlay-to-particular-videos.png" alt="Ajouter une superposition à une vidéo spécifique"> <figcaption class="bcls-caption--image">Ajouter une superposition à une vidéo spécifique</figcaption> </figure> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-dynamic-overlay-to-channel.png" alt="Définir les propriétés de super"> <figcaption class="bcls-caption--image">Définir les propriétés de super</figcaption> </figure>
+    <h3>Remarques</h3>
     <ol>
-      <li>This will create a schedule for the selected video’s start time and it’s not attached to the video itself. In other words, if the video is re-ordered (or) deleted (or) start time changed due to various changes to the EPG schedule, the overlay schedule will still remain on the originally scheduled start time.</li>
-      <li>This Add Overlay in context to the video is recommended to be used on a Running channel rather than on a channel in DRAFT or SCHEDULED state - because the running channel is more time accurate (powered by EPG) than the channels in other states.</li>
-      <li>On a running channel, this option is available on all videos following the current playing video.</li>
-      <li>This option is not available for Ad placeholder videos on SSAI channel.</li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Image_handling">Overlay handling</h2>
+      <li>Cela créera un calendrier pour l'heure de début de la vidéo sélectionnée et celle-ci n'est pas attachée à la vidéo elle-même.™™ En d'autres termes, si la vidéo est réorganisée (ou) supprimée (ou) si l'heure de début est modifiée en raison de diverses modifications apportées au calendrier EPG, le calendrier de superposition restera à l'heure de début initialement prévue.</li>
+      <li>Il est recommandé d'utiliser cette option Ajouter une superposition dans le contexte de la vidéo sur une chaîne en cours d'exécution plutôt que sur une chaîne en état DRAFT ou SCHEDULED, car la chaîne en cours d'exécution est plus précise dans le temps (alimentée par EPG) que les chaînes dans d'autres états.</li>
+      <li>Sur une chaîne en cours d'exécution, cette option est disponible sur toutes les vidéos suivant la vidéo en cours de lecteur.</li>
+      <li>Cette option n'est pas disponible pour les vidéos avec espace réservé aux annonces diffusées sur la chaîne SSAI.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Image_handling">Gestion des superpositions</h2>
     <ul>
-      <li>Any Javascript authored to interact with a backend system will be stripped off while streaming out of Cloud Playout.</li>
-      <li>The overlays are applied to the source MP4 video before encoding.</li>
-      <li>You should size the overlay content to match the width and height of the largest source video rendition (the progressive MP4 sources) in your channel. </li>
-      <li>Cloud Playout cannot change the resolution of the overlay content to fill the frame (no upscaling), although it will resize content down to fit a smaller video rendition without cropping.</li>
-    </ul>
-  </section>
+      <li>Tout Javascript créé pour interagir avec un système backend sera supprimé lors de la diffusion en continu hors de Cloud Playout.</li>
+      <li>Les superpositions sont appliquées à la vidéo MP4 source avant l'encodage.</li>
+      <li>Vous devez dimensionner le contenu de la superposition pour qu'il corresponde à la largeur et à la hauteur du plus grand rendu vidéo source (les sources MP4 progressives) de votre chaîne. </li>
+      <li>Cloud Playout ne peut pas modifier la résolution du contenu de superposition pour remplir l'image (pas de mise à l'échelle supérieure), bien qu'il réduise la taille du contenu pour l'adapter à un rendu vidéo plus petit sans recadrage.</li>
+    </ul> </section>
   <!-- <section class="bcls-section">
     <h2 id="Known_issues">Known issues</h2>
     <ol>
@@ -130,5 +95,4 @@
         </ul>
       </li>
     </ol>
-  </section> -->
-</article>
+  </section> --> </article>

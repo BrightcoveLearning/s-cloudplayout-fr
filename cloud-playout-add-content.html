@@ -1,210 +1,136 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <p>Also see <a href="{{ site.cloud_playout_path }}adding-bumpers-to-vod.html">Adding Bumpers to Content</a> for adding bumpers to VOD or live event items.</p>
-
-  <section class="bcls-section">
-		<h2 id="Introduction">Introduction</h2>
-    <p>Your Cloud Playout channel can contain up to 1000 content items in the program. Here we will see how to manage the program, including how to add and re-order content items.</p>
-    <p>The sections below will guide you through:</p>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary>
+  <p>Consultez également la section<a href="{{ site.cloud_playout_path }}adding-bumpers-to-vod.html"> Ajout de pare-chocs au contenu</a> pour ajouter des pare-chocs aux éléments de VOD ou d'événements en direct.</p> <section class="bcls-section">
+		<h2 id="Introduction">Présentation</h2>
+    <p>Votre chaîne Cloud Playout peut contenir jusqu'à 1 000 éléments de contenu dans le programme. Nous verrons ici comment gérer le programme, y compris comment ajouter et réorganiser des éléments de contenu.</p>
+    <p>Les sections ci-dessous vous guideront à travers:</p>
     <ul>
-      <li>Understanding and switching between the <a href="#Schedule_and_Program_views">Schedule and Program views</a></li>
-      <li><a href="#add_videos">Adding VOD content</a></li>
-      <li><a href="#add_playlists">Importing playlists</a></li>
-      <li><a href="#Add_Live_events">Adding Live events</a></li>
-      <li><a href="#Reordering_Videos">Reordering Program items</a></li>
-    </ul>
-  </section>
-  <p>Also see <a href="/cloud-playout/adding-bumpers-to-vod.html">Adding Bumpers to Content</a> for adding bumpers to VOD or live event items.</p>
-
-  <section class="bcls-section">
-    <h2 id="Schedule_and_Program_views">Schedule and Program views</h2>
-    <p>You can easily switch between <strong>Schedule</strong> and <strong>Program</strong> views by clicking the corresponding tab. The Schedule view will present the complete schedule of the channel with video start time, end time and duration. In the Program view, you can add videos, import playlists, insert bumpers, insert ads, add live events, and reorder the program items.</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/schedule-program-views-draft.png" alt="Program View in Draft State">
-      <figcaption class="bcls-caption--image">Program View in Draft State</figcaption>
-    </figure>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/schedule-program-views-running.png" alt="Schedule View in Running State">
-      <figcaption class="bcls-caption--image">Schedule View in Running State</figcaption>
-    </figure>
-  </section>
-
-  <section class="bcls-section">
-		<h2 id="Adding_content">Adding content</h2>
-		<p>Depending on how you configured your Cloud Playout channel, you can add content of various kinds. VOD content and playlists can be added to any channel. In addition, you can add live events if you configured the channel to support that. The following sections provide steps for adding each kind of content.</p>
-		<aside class="bcls-aside bcls-aside--information">Note that you can also <a href="/cloud-playout/adding-bumpers-to-vod.html">add bumpers</a> to your channel, and <a href="/cloud-playout/enabling-server-side-ads.html">server-side ads</a>, if the channel was configured for that. See those topics for details on how to do that.</aside>
-	</section>
-  
-  <section class="bcls-section">
-    <h2 id="add_videos">Adding VOD content</h2>
+      <li>Compréhension et basculement entre les vues<a href="#Schedule_and_Program_views"> Schedule et Program</a></li>
+      <li><a href="#add_videos">Ajout de contenu VOD</a></li>
+      <li><a href="#add_playlists">Importer des playlists</a></li>
+      <li><a href="#Add_Live_events">Ajout d'événements en direct</a></li>
+      <li><a href="#Reordering_Videos">Réorganisation des articles du programme</a></li>
+    </ul> </section>
+  <p>Consultez également la section<a href="/cloud-playout/adding-bumpers-to-vod.html"> Ajout de pare-chocs au contenu</a> pour ajouter des pare-chocs aux éléments de VOD ou d'événements en direct.</p> <section class="bcls-section">
+    <h2 id="Schedule_and_Program_views">Vues du calendrier et du programme</h2>
+    <p>Vous pouvez facilement basculer entre les<strong> vues</strong> Calendrier<strong> et</strong> Programme en cliquant sur l'onglet correspondant. La vue Programmation présente le programme complet de la chaîne avec l'heure de début, l'heure de fin et la durée de la vidéo. Dans la vue Programme, vous pouvez ajouter des vidéos, importer des listes de lecteur, insérer des pare-chocs, insérer des publicités, ajouter des événements en direct et réorganiser les éléments du programme.</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/schedule-program-views-draft.png" alt="Affichage du programme en état de brouillon"> <figcaption class="bcls-caption--image">Affichage du programme en état de brouillon</figcaption> </figure> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/schedule-program-views-running.png" alt="Affichage de la planification en cours d'exécution"> <figcaption class="bcls-caption--image">Affichage de la planification en cours d'exécution</figcaption> </figure> </section> <section class="bcls-section">
+		<h2 id="Adding_content">Ajout de contenu</h2>
+		<p>Selon la façon dont vous avez configuré votre chaîne Cloud Playout, vous pouvez ajouter différents types de contenu. Le contenu VOD et les listes de lecteur peuvent être ajoutés à n'importe quelle chaîne. En outre, vous pouvez ajouter des événements en direct si vous avez configuré la chaîne pour les prendre en charge. Les sections suivantes décrivent les étapes à suivre pour ajouter chaque type de contenu.</p> <aside class="bcls-aside bcls-aside--information">Notez que vous pouvez également<a href="/cloud-playout/adding-bumpers-to-vod.html"> ajouter des bumpers</a> à votre chaîne et des publicités<a href="/cloud-playout/enabling-server-side-ads.html"> côté serveur</a>, si la chaîne a été configurée pour cela. Consultez ces rubriques pour plus de détails sur la façon de procéder.</aside> </section> <section class="bcls-section">
+    <h2 id="add_videos">Ajout de contenu VOD</h2>
     <!-- <div style="position: relative; display: block; max-width: 707px;"><div style="padding-top: 76.38%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6263404274001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div> -->
-    <p>After you create your channel, or when you go to the channel details, the screen will show the channel settings:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-channel-details.png" alt="Channel Settings">
-      <figcaption class="bcls-caption--image">Channel Settings</figcaption>
-    </figure>
-    <p>You can edit details, but the main next step is to add content to the channel.</p>
-    <h3>Add videos (VOD) steps</h3>
+    <p>Après avoir créé votre chaîne, ou lorsque vous accédez aux détails de la chaîne, l'écran affiche les paramètres de la chaîne:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-channel-details.png" alt="Paramètres des chaînes"> <figcaption class="bcls-caption--image">Paramètres des chaînes</figcaption> </figure>
+    <p>Vous pouvez modifier les détails, mais la prochaine étape consiste à ajouter du contenu à la chaîne.</p>
+    <h3>Étapes d'ajout de vidéos (VOD)</h3>
     <ol class="bcls-tasklist-restart" style="--s:1">
-      <li>Click <span class="button-blue">Add Videos</span> (If you are on the channel list page, click the  channel name to open the channel settings page and then click <span class="button-blue">Add Videos</span>).</li>
+      <li>Cliquez sur<span class="button-blue"> Ajouter des vidéos</span> (si vous êtes sur la page de liste des chaînes, cliquez sur le nom de la chaîne pour ouvrir la page des paramètres de la chaîne, puis cliquez sur<span class="button-blue"> Ajouter des vidéos</span>).</li>
       <li>
-        If you have already added other content to the channel, select <strong><em>one</em></strong> video that you want the new video(s) to be inserted after:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-videos-desired-location.png" alt="Select Insertion Point">
-          <figcaption class="bcls-caption--image">Select Insertion Point</figcaption>
-        </figure>
-        <aside class="bcls-aside bcls-aside--information language-editable">If no video is selected to define the insertion point, new videos will be added to the end of the program.</aside>
+        Si vous avez déjà ajouté d'autres contenus à la chaîne, sélectionnez<strong><em> une</em></strong> vidéo après laquelle vous souhaitez insérer la ou les nouvelles vidéos: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-videos-desired-location.png" alt="Sélectionnez le point d'insertion"> <figcaption class="bcls-caption--image">Sélectionner le point d'insertion</figcaption> </figure> <aside class="bcls-aside bcls-aside--information language-editable"> Si aucune vidéo n'est sélectionnée pour définir le point d'insertion, de nouvelles vidéos seront ajoutées à la fin du programme.</aside>
       </li>
       <li>
-        Use <strong>Search</strong> to find videos you want. In addition to searching on general terms, you can also search by field and use a <i data-feather="plus" class="button-icon"></i> sign at the beginning of the search string to limit results to videos that match. The fields you can search on are <code translate="No">name</code>, <code translate="No">tags</code>, and <code translate="No">custom_fields</code>. For example:
+        Utilisez<strong> la fonction</strong> de recherche pour trouver les vidéos que vous souhaitez. En plus de rechercher des termes généraux, vous pouvez également effectuer une recherche par champ et utiliser un signe au début de la chaîne de recherche pour limiter les résultats aux vidéos qui correspondent. Les champs sur lesquels vous pouvez effectuer une recherche sont<code translate="No"> name </code><code translate="No">,</code> tags et<code translate="No"> custom_fields</code>. Par exemple:
         <ul>
-          <li><code translate="no">+tags:bird</code></li>
-          <li><code translate="no">+name:"blue heron"</code></li>
+          <li><code translate="no">+tags: oiseau</code></li>
+          <li><code translate="no">+name: héron bleu-fr/</code></li>
         </ul>
       </li>
-      <li>Click the checkbox next to the videos you want to add to the channel.
-        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="select videos" src="/assets/images/s-cloudplayout-img/playout-select-videos.png" /></figure>
+      <li>Cochez la case en regard des vidéos que vous souhaitez ajouter à la chaîne. <figure class="bcls-figure"><img class="bcls-image--no-border" alt="sélectionner des vidéos" src="/assets/images/s-cloudplayout-img/playout-select-videos.png" /></figure>
       </li>
-      <li>Click <span class="button-blue">Add Videos</span>)</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
+      <li>Cliquez sur<span class="button-blue"> Ajouter des vidéos</span>)</li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
       <li>
-        Newly added videos will appear in the program with an <span class="button-blue">Added</span> label beside the titles:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/newly-added-videos.png" alt="Added Videos">
-          <figcaption class="bcls-caption--image">Added Videos</figcaption>
-        </figure>
-        <p>Note that start and end times are automatically calculated from the video durations. You can drag and drop videos in the list to reorder them, and the start/end times will be automatically adjusted.</p>
+        Les vidéos récemment ajoutées apparaîtront dans le programme avec une<span class="button-blue"> étiquette</span> Added à côté des titres: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/newly-added-videos.png" alt="Vidéos ajoutées"> <figcaption class="bcls-caption--image">Vidéos ajoutées</figcaption> </figure>
+        <p>Notez que les heures de début et de fin sont automatiquement calculées à partir des durées de la vidéo. Vous pouvez faire glisser et déposer des vidéos dans la liste pour les réorganiser, et les heures de début et de fin seront automatiquement ajustées.</p>
       </li>
-    </ol>
-    <aside class="bcls-aside bcls-aside--information language-editable">
-      Also note that the <strong translate="no">video ID</strong> appears under the title of each video in case you need to check your video library to make sure you have the correct one in the program:
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/video-ids-in-program-list.png" alt="Video IDs">
-        <figcaption class="bcls-caption--image">Video IDs</figcaption>
-      </figure>
-    </aside>
-	</section>
-
-	<section class="bcls-section">
-		<h2 id="add_playlists">Importing playlists</h2>
-		<p>You can also import whole playlists into you channel. Note the following conditions:</p>
+    </ol> <aside class="bcls-aside bcls-aside--information language-editable"> Notez également que l'identifiant de la<strong translate="no"> vidéo</strong> apparaît sous le titre de chaque vidéo au cas où vous auriez besoin de vérifier votre vidéothèque pour vous assurer que vous avez la bonne dans le programme: <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/video-ids-in-program-list.png" alt="ID vidéo"> <figcaption class="bcls-caption--image">ID vidéo</figcaption> </figure> </aside> </section> <section class="bcls-section">
+		<h2 id="add_playlists">Importer des playlists</h2>
+		<p>Vous pouvez également importer des listes de lecteur complètes dans votre chaîne. Notez les conditions suivantes:</p>
 		<ul>
-			<li>You can import both EXPLICIT (manual) and smart playlists.</li>
-			<li>A <strong>snapshot</strong> of the playlist in its current state will be imported (meaning that future changes to the playlist will <strong>not</strong> be reflected in the channel contents).</li>
-			<li>Only one playlist can be imported at a time.</li>
-			<li>If the imported playlist contains a Live event, an identical new Live event with same name, description & duration will be created. This is because a Live event always shares an 1:1 relationship with the channel.</li>
-			<li>The videos in the playlist will be added <strong>to the end</strong> of the current channel program.</li>
-			<li>You can add VOD content as well as playlists, and duplicates are allowed.</li>
-			<li>There is a validation check on the total asset limit (1000). If the import will exceed 1000 asset limit, the import will fail.</li>
-      <li>If Live input is not enabled for the channel, you can still import a playlist that includes Live events in it by choosing to exclude the Live events from import.</li>
-      <li>If this is an SSAI-enabled channel, live events are not allowed. You can still import a playlist that includes Live events in it by choosing to exclude the Live events from import.</li>
-      <li>Only the eligible assets with an MP4 rendition will be allowed. A warning indicates what assets will be ineligible for import - upon confirmation, only the eligible assets will be imported.</li>
+			<li>Vous pouvez importer des listes de lecteur EXPLICIT (manuelles) et intelligentes.</li>
+			<li>Un<strong> instantané</strong> de la liste de lecteur dans son état actuel sera importé (ce qui signifie que les modifications futures de la liste de lecteur<strong> ne</strong> seront pas répercutées dans le contenu de la chaîne).</li>
+			<li>Une seule liste de lecteur peut être importée à la fois.</li>
+			<li>Si la liste de lecteur importée contient un événement en direct, un nouvel événement en direct identique portant le même nom, la même description et la même durée sera créé. En effet, un événement Live partage toujours une relation individuelle avec la chaîne.</li>
+			<li>Les vidéos de la playlist seront ajoutées<strong> à la fin</strong> du programme actuel de la chaîne.</li>
+			<li>Vous pouvez ajouter du contenu VOD ainsi que des listes de lecteur, et les doublons sont autorisés.</li>
+			<li>Il y a un contrôle de validation de la limite totale de l'actif (1000). Si l'importation dépasse la limite de 1 000 actifs, l'importation échouera.</li>
+      <li>Si l'entrée en direct n'est pas activée pour la chaîne, vous pouvez toujours importer une liste de lecteur qui inclut des événements en direct en choisissant d'exclure les événements en direct de l'importation.</li>
+      <li>S'il s'agit d'une chaîne compatible SSAI, les événements en direct ne sont pas autorisés. Vous pouvez toujours importer une liste de lecteur qui inclut des événements en direct en choisissant d'exclure les événements en direct de l'importation.</li>
+      <li>Seules les ressources éligibles avec un rendu MP4 seront autorisées. Un avertissement indique quels actifs ne seront pas éligibles à l'importation - après confirmation, seuls les actifs éligibles seront importés.</li>
 		</ul>
-		<h3>Add playlist steps</h3>
+		<h3>Ajouter des étapes de playlist</h3>
 		<ol class="bcls-tasklist-restart">
       <li>
-        If you have already added other content to the channel, select <strong><em>one</em></strong> video that you want the new video(s) to be inserted after:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-videos-desired-location.png" alt="Select Insertion Point">
-          <figcaption class="bcls-caption--image">Select Insertion Point</figcaption>
-        </figure>
-        <aside class="bcls-aside bcls-aside--information language-editable">If no video is selected to define the insertion point, new videos will be added to the end of the program.</aside>
+        Si vous avez déjà ajouté d'autres contenus à la chaîne, sélectionnez<strong><em> une</em></strong> vidéo après laquelle vous souhaitez insérer la ou les nouvelles vidéos: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-videos-desired-location.png" alt="Sélectionnez le point d'insertion"> <figcaption class="bcls-caption--image">Sélectionner le point d'insertion</figcaption> </figure> <aside class="bcls-aside bcls-aside--information language-editable"> Si aucune vidéo n'est sélectionnée pour définir le point d'insertion, de nouvelles vidéos seront ajoutées à la fin du programme.</aside>
       </li>
-			<li>There is a validation check on the total asset limit (100). If the import will exceed 100 asset limit, the import will fail.</li>
-			<li>
-				<aside class="bcls-aside bcls-aside--information">Note: If Live input is not enabled for the channel, you can still import a playlist that includes Live events in it by choosing to exclude the Live events from import.</aside>
+			<li>Il y a un contrôle de validation de la limite totale de l'actif (100). Si l'importation dépasse la limite de 100 actifs, l'importation échouera.</li>
+			<li> <aside class="bcls-aside bcls-aside--information">Remarque: Si l'entrée en direct n'est pas activée pour la chaîne, vous pouvez toujours importer une liste de lecteur qui inclut des événements en direct en choisissant d'exclure les événements en direct de l'importation.</aside>
 			</li>
-			<li>
-				<aside class="bcls-aside bcls-aside--information">Note: If this is an SSAI-enabled channel, live events are not allowed. You can still import a playlist that includes Live events in it by choosing to exclude the Live events from import.</aside>
+			<li> <aside class="bcls-aside bcls-aside--information">Remarque: S'il s'agit d'une chaîne compatible SSAI, les événements en direct ne sont pas autorisés. Vous pouvez toujours importer une liste de lecteur qui inclut des événements en direct en choisissant d'exclure les événements en direct de l'importation.</aside>
 			</li>
-			<li>
-				<aside class="bcls-aside bcls-aside--information">Note: Only the eligible assets with an MP4 rendition will be allowed. A warning indicates what assets will be ineligible for import - upon confirmation, only the eligible assets will be imported.</aside>
+			<li> <aside class="bcls-aside bcls-aside--information">Remarque: Seules les ressources éligibles avec un rendu MP4 seront autorisées. Un avertissement indique quels actifs ne seront pas éligibles à l'importation - après confirmation, seuls les actifs éligibles seront importés.</aside>
 			</li>
 		</ul>
-		<h3>Add playlist steps</h3>
+		<h3>Ajouter des étapes de playlist</h3>
 		<ol class="bcls-tasklist-restart">
-			<li>Click <span class="button-blue">Import Playlists</span>.</li>
-			<li>Click <span class="blue-button">Import</span> for the playlist you want to import.</li>
-			<li>If messages appear indicating that some items in the playlist cannot be imported, click <span class="blue-button">Proceed</span> if you want to import the supported videos.</li>
-      <li>Click <span class="button-blue">Save</span>.</li>
+			<li>Cliquez sur<span class="button-blue"> Importer des playlists</span>.</li>
+			<li>Cliquez sur<span class="blue-button"> Importer</span> pour la liste de lecteur que vous souhaitez importer.</li>
+			<li>Si des messages s'affichent indiquant que certains éléments de la liste de lecteur ne peuvent pas être importés, cliquez sur<span class="blue-button"> Continuer</span> si vous souhaitez importer les vidéos prises en charge.</li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span>.</li>
 			<li>
-				If the import was successful, you will see the videos in your program list with an <span class="button-blue">Imported</span> label beside the titles:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/video-imported-from-playlist.png" alt="Videos Imported from Playlist">
-          <figcaption class="bcls-caption--image">Videos Imported from Playlist</figcaption>
-        </figure>
+				Si l'importation a réussi, vous verrez les vidéos dans votre liste de programmes avec une<span class="button-blue"> étiquette</span> Importé à côté des titres: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/video-imported-from-playlist.png" alt="Vidéos importées depuis la liste de lecteur"> <figcaption class="bcls-caption--image">Vidéos importées depuis la liste de lecteur</figcaption> </figure>
 			</li>
-		</ol>
-	</section>
-	<section class="bcls-section">
-		<h2 id="Add_Live_events">Adding Live events</h2>
-		<p>Note: this only applies if the channel is enabled for live events.</p>
+		</ol>  </section><section class="bcls-section">
+		<h2 id="Add_Live_events">Ajout d'événements en direct</h2>
+		<p>Remarque: cela ne s'applique que si la chaîne est activée pour les événements en direct.</p>
     <ol class="bcls-tasklist">
       <li>
-        If you have already added other content to the channel, select <strong><em>one</em></strong> video that you want the new video(s) to be inserted after:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-videos-desired-location.png" alt="Select Insertion Point">
-          <figcaption class="bcls-caption--image">Select Insertion Point</figcaption>
-        </figure>
-        <aside class="bcls-aside bcls-aside--information language-editable">If no video is selected to define the insertion point, new videos will be added to the end of the program.</aside>
+        Si vous avez déjà ajouté d'autres contenus à la chaîne, sélectionnez<strong><em> une</em></strong> vidéo après laquelle vous souhaitez insérer la ou les nouvelles vidéos: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/add-videos-desired-location.png" alt="Sélectionnez le point d'insertion"> <figcaption class="bcls-caption--image">Sélectionner le point d'insertion</figcaption> </figure> <aside class="bcls-aside bcls-aside--information language-editable"> Si aucune vidéo n'est sélectionnée pour définir le point d'insertion, de nouvelles vidéos seront ajoutées à la fin du programme.</aside>
       </li>
-        <li>Click <img src="/assets/images/s-cloudplayout-img/cloudplayout-add-live-event.png" alt="add live event" class="ui-image"></li>
+        <li>Cliquez <img src="/assets/images/s-cloudplayout-img/cloudplayout-add-live-event.png" alt="ajouter un événement en direct" class="ui-image"></li>
         <li>
-          In the Add Live Event dialog, enter the <strong>Name</strong>, <strong>Duration</strong>, and <strong>Description</strong> for the live event:
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-add-live-event.png" alt="Add Live Event">
-            <figcaption class="bcls-caption--image">Add Live Event</figcaption>
-          </figure>
-          <p>Note that the minimum duration for a live event is 5 minutes, and the duration can be incremented or decremented in 5 minute intervals only - If needed the duration can be edited in-line on the textbox to adjust the granularity of time. The duration of a live event can be modified at any time, even while it is currently playing.</p>
+          Dans la boîte de dialogue Ajouter un événement en direct, entrez le<strong> nom </strong><strong>,</strong> la durée et<strong> la description</strong> de l'événement en direct: <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-add-live-event.png" alt="Ajouter un événement en direct"> <figcaption class="bcls-caption--image">Ajouter un événement en direct</figcaption> </figure>
+          <p>Notez que la durée minimale d'un événement en direct est de 5 minutes, et que la durée peut être incrémentée ou décrémentée par intervalles de 5 minutes uniquement. Si nécessaire, la durée peut être modifiée en ligne dans la zone de texte pour ajuster la granularité du temps. La durée d'un événement en direct peut être modifiée à tout moment, même pendant qu'il est en cours de lecteur.</p>
         </li>
         <li>
-          After you add live events, they will appear in the program list along with VOD items:
-          <figure class="bcls-figure">
-            <img class="bcls-image" src="/assets/images/s-cloudplayout-img/live-event-added-to-program.png" alt="Live Event Added">
-            <figcaption class="bcls-caption--image">Live Event Added</figcaption>
-          </figure>
+          Une fois que vous avez ajouté des événements en direct, ils apparaîtront dans la liste des programmes avec les éléments VOD: <figure class="bcls-figure">
+            <img class="bcls-image" src="/assets/images/s-cloudplayout-img/live-event-added-to-program.png" alt="Événement en direct ajouté"> <figcaption class="bcls-caption--image">Événement en direct ajouté</figcaption> </figure>
         </li>
-        <li>You can drag live events to reorder the list just as you can videos. You can also use the <img src="/assets/images/s-cloudplayout-img/cloudplayout-quick-edit.png" alt="quick edit" class="ui-image"> button to modify the duration of a live event.</li>
-    </ol>
-	</section>
-
-  <section class="bcls-section">
-    <h2 id="Reordering_Videos">Reordering Program items</h2>
-    <p>There are two ways to reorder items in the program:</p>
+        <li>Vous pouvez faire glisser des événements en direct pour réorganiser la liste, tout comme vous pouvez le faire pour les vidéos. Vous pouvez également utiliser le <img src="/assets/images/s-cloudplayout-img/cloudplayout-quick-edit.png" alt="édition rapide" class="ui-image"> pour modifier la durée d'un événement en direct.</li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Reordering_Videos">Réorganisation des articles du programme</h2>
+    <p>Il existe deux manières de réorganiser les articles dans le programme:</p>
     <ul>
-      <li>If you are just moving an item to a nearby location, you can use drag and drop.</li>
-      <li>If you are moving an item to a distant location in a large program, you do by changing the <strong>order number.</strong>.</li>
+      <li>Si vous déplacez simplement un élément vers un emplacement proche, vous pouvez utiliser le glisser-déposer.</li>
+      <li>Si vous déplacez un article vers un endroit éloigné dans le cadre d'un programme de grande envergure, vous pouvez le faire en modifiant le numéro de<strong> commande. </strong>.</li>
     </ul>
-    <h3>Reordering using drag and drop</h3>
-    <h4>Channels that are not running</h4>
+    <h3>Réorganisation par glisser-déposer</h3>
+    <h4>Chaînes qui ne fonctionnent pas</h4>
     <div style="position: relative; display: block; max-width: 588px;"><div style="padding-top: 57.31%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6263404043001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div>
-    <h5>Steps</h5>
+    <h5>Étapes</h5>
     <ol class="bcls-tasklist-restart">
-      <li>Click and drag the <strong>::</strong> icon to the left of the thumbnail image and drag it to the desired location in the list.</li>
+      <li>Cliquez et faites glisser l'<strong>icône</strong>:: à gauche de l'image miniature, puis faites-la glisser vers l'emplacement souhaité dans la liste.</li>
     </ol>
-    <h4>Channels that are running</h4>
+    <h4>Chaînes en cours d'exécution</h4>
     <!-- <div style="position: relative; display: block; max-width: 896px;"><div style="padding-top: 57.31%;"><iframe src="https://players.brightcove.net/6225316964001/Qznf2bKtV_default/index.html?videoId=6264486040001" allowfullscreen="" allow="encrypted-media" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div></div> -->
-    <h5>Steps</h5>
+    <h5>Étapes</h5>
     <ol class="bcls-tasklist-restart">
-      <li>Click <span class="button-blue">Edit Program</span>.</li>
-      <li>Click and drag the <strong>::</strong> icon to the left of the thumbnail image and drag it to the desired location in the list.</li>
+      <li>Cliquez sur<span class="button-blue"> Modifier le programme</span>.</li>
+      <li>Cliquez et faites glisser l'<strong>icône</strong>:: à gauche de l'image miniature, puis faites-la glisser vers l'emplacement souhaité dans la liste.</li>
     </ol>
-    <h3>Reordering by order number</h3>
+    <h3>Réorganisation par numéro de commande</h3>
     <p>
-      Notice that the order number of the program items appears on the left side of the list:
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/order-of-videos-in-program.png" alt="Order Number">
-        <figcaption class="bcls-caption--image">Order Number</figcaption>
-      </figure>
+      Notez que le numéro de commande des articles du programme apparaît sur le côté gauche de la liste: <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/order-of-videos-in-program.png" alt="Numéro de commande"> <figcaption class="bcls-caption--image">Numéro de commande</figcaption> </figure>
     </p>
     <p>
-      You can also also move a video in the program by clicking the order number and entering a new one. In the example below, we are moving the video at position 700 to position 5 in the program:
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/reorder-item-from-700-5.png" alt="Reorder by Changing the Order Number">
-        <figcaption class="bcls-caption--image">Reorder by Changing the Order Number</figcaption>
-      </figure>
-    </p>
-  </section>
-    
-</article>
+      Vous pouvez également déplacer une vidéo dans le programme en cliquant sur le numéro de commande et en saisissant un nouveau. Dans l'exemple ci-dessous, nous déplaçons la vidéo de la position 700 vers la position 5 dans le programme: <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/reorder-item-from-700-5.png" alt="Réorganiser en changeant le numéro de commande"> <figcaption class="bcls-caption--image">Réorganiser en changeant le numéro de commande</figcaption> </figure>
+    </p>   </section></article>

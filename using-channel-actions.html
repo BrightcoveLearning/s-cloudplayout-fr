@@ -1,36 +1,25 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="actions">Using channel actions</h2>
-    <p>Depending on the status of the channel, various channel action buttons will be available on the channel settings page. Access the channel action buttons by clicking on the channel name to view the channel details. The following channel action buttons are available:</p>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="actions">Utiliser les actions des chaînes</h2>
+    <p>En fonction de l'état de la chaîne, différents boutons d'action de la chaîne seront disponibles sur la page des paramètres de la chaîne. Accédez aux boutons d'action de la chaîne en cliquant sur le nom de la chaîne pour afficher les détails de la chaîne. Les boutons d'action de chaîne suivants sont disponibles:</p>
     <ul>
-      <li><img src="/assets/images/s-cloudplayout-img/cloudplayout-activate-button.png" alt="activate" class="ui-image"> - Activating a channel makes it available for streaming. You must add videos and/or live events to the channel and click <img src="/assets/images/s-cloudplayout-img/cloudplayout-save-button.png" alt="save" class="ui-image"> before the Activate button will appear.</li>
-      <li><img src="/assets/images/s-cloudplayout-img/cloudplayout-play-now-button.png" alt="play now" class="ui-image"> - Click <strong>Play Now</strong> to start streaming the channel. This option is only available for channels that have an upcoming start time. The channel will start at the scheduled start time automatically.</li>
-      <li><img src="/assets/images/s-cloudplayout-img/playout-stop-now.png" alt="stop now" class="ui-image"> - Click <strong>Stop Now</strong> to stop a running channel. This will stop the channel and end the live stream. If the channel is looping, and has an end date/time, the channel will stop at that time automatically. This option gives you a way to stop it early.</li>
-    </ul>
-  </section>
-	<section class="bcls-section">
-		<h2 id="Resource_deallocation_on_channel_stop">Resource de-allocation on channel stop</h2>
-		<p>The following happens when you stop a channel:</p>
+      <li><img src="/assets/images/s-cloudplayout-img/cloudplayout-activate-button.png" alt="activer" class="ui-image"> - L'activation d'une chaîne la rend disponible en streaming. Vous devez ajouter des vidéos et/ou des événements en direct à la chaîne et cliquer sur <img src="/assets/images/s-cloudplayout-img/cloudplayout-save-button.png" alt="sauver" class="ui-image"> avant que le bouton Activer n'apparaisse.</li>
+      <li><img src="/assets/images/s-cloudplayout-img/cloudplayout-play-now-button.png" alt="joue maintenant" class="ui-image"> - Cliquez sur<strong> Play Now</strong> pour démarrer la diffusion en continu de la chaîne. Cette option n'est disponible que pour les chaînes dont l'heure de début est imminente. La chaîne démarrera automatiquement à l'heure de début planifiée.</li>
+      <li><img src="/assets/images/s-cloudplayout-img/playout-stop-now.png" alt="Arrête maintenant" class="ui-image"> - Cliquez sur<strong> Arrêter maintenant</strong> pour arrêter une chaîne en cours d'exécution. Cela arrêtera la chaîne et mettra fin à la diffusion en direct. Si le canal est en boucle et possède une date/heure de fin, le canal s'arrête automatiquement à ce moment-là. Cette option vous permet d'y mettre fin plus tôt.</li>
+    </ul>  </section><section class="bcls-section">
+		<h2 id="Resource_deallocation_on_channel_stop">Désallocation des ressources à l'arrêt du canal</h2>
+		<p>Voici ce qui se produit lorsque vous arrêtez une chaîne:</p>
 		<ol>
-			<li>A Cloud Playout channel when stopped will enter in to a <strong>DRAFT</strong> state which will enable users to modify the channel settings again.</li>
-			<li>This will also clear-up the chained BC Live events if there are any.</li>
-			<li>The channel will have to be <strong>Activated</strong> again so that the resources will get allocated and the channel put into a <strong>SCHEDULED</strong> state.</li>
-			<li>If the Cloud Playout channel is enabled for a Live streams, it will show a <strong>static entry point for RTMP ingest</strong> that will remain static throughout the lifetime of the channel irrespective of how many times the channel is stopped and started again.
-				<figure class="bcls-figure">
-					<img class="bcls-image" src="/assets/images/s-cloudplayout-img/static-entry-point-for-rtmp-ingest.png" alt="Static Entry Point for RTMP Ingest">
-					<figcaption class="bcls-caption--image">Static Entry Point for RTMP Ingest</figcaption>
-				</figure>
-				<p>This entry point will be able to start accepting input once the channel starts up and is running.</p>
+			<li>Une chaîne Cloud Playout lorsqu'elle est arrêtée passe à<strong> l'état</strong> BROUILLON, ce qui permet aux utilisateurs de modifier à nouveau les paramètres de la chaîne.</li>
+			<li>Cela permettra également d'éclaircir les événements BC Live enchaînés, le cas échéant.</li>
+			<li>Le canal devra être<strong> activé à</strong> nouveau pour que les ressources soient allouées et que le canal passe à l'<strong>état</strong> SCHEDULED.</li>
+			<li>Si le canal Cloud Playout est activé pour un flux en direct, il affichera un point d'entrée<strong> statique pour l'ingestion RTMP</strong> qui restera statique tout au long de la durée de vie du canal, quel que soit le nombre de fois où le canal est arrêté et redémarré. <figure class="bcls-figure">
+					<img class="bcls-image" src="/assets/images/s-cloudplayout-img/static-entry-point-for-rtmp-ingest.png" alt="Point d'entrée statique pour l'ingestion RTMP"> <figcaption class="bcls-caption--image">Point d'entrée statique pour l'ingestion RTMP</figcaption> </figure>
+				<p>Ce point d'entrée pourra commencer à accepter les entrées une fois que le canal démarrera et sera en cours d'exécution.</p>
 			</li>
-			<li>If Cloud Playout is not able to provide a static RTMP ingest point due to an internal issue, we will attempt to show an IP-address-based ingest point. If this happens, we recommend that you check regularly for a change in the RTMP ingest point for the channel.</li>
-			<li>
-				<aside class="bcls-aside bcls-aside--information">Note: After activating the channel, it takes an average of 1-2 minutes for Cloud Playout to publish the new IP address for the static ingest point. So, if a channel is started immediately after activation within 1-2 minutes, and the Live Event happens to be the first asset in the channel’s playlist, then there is a possibility that the ingest point will be unresolvable. It will become resolvable as soon as the IP address for static ingest point is published.</aside>
+			<li>Si Cloud Playout n'est pas en mesure de fournir un point d'entrée RTMP statique en raison d'un problème interne, nous essaierons d'afficher un point d'ingestion basé sur l'adresse IP. Dans ce cas, nous vous recommandons de vérifier régulièrement si le point d'acquisition RTMP du canal a été modifié.</li>
+			<li> <aside class="bcls-aside bcls-aside--information">Remarque: Après l'activation du canal, il faut en moyenne 1 à 2 minutes à Cloud Playout pour publier la nouvelle adresse IP du point d'entrée statique. Ainsi, si une chaîne est démarrée immédiatement après l'activation dans les 1 à 2 minutes et que l'événement en direct est le premier actif de la playlist de la chaîne, il est possible que le point d'ingestion ne soit pas résolu.™ Il sera possible de le résoudre dès que l'adresse IP du point d'entrée statique sera publiée.</aside>
 			</li>
-			<li>
-				<aside class="bcls-aside bcls-aside--information">Note: In a case where the channel ran with Live Input for the first run and stopped, and you then turn off the Live Input for the channel, the existing program might still have Live events that will fail. If you decide to disable live streams for the channel after stopping it, you should remove any live events from the channel content before restarting it.</aside>
+			<li> <aside class="bcls-aside bcls-aside--information">Remarque
+description: Dans le cas où la chaîne s'est exécutée avec Live Input lors de la première exécution et s'est arrêtée, puis que vous désactivez l'entrée en direct pour la chaîne, le programme existant peut toujours contenir des événements en direct qui échoueront. Si vous décidez de désactiver les diffusions en direct pour la chaîne après l'avoir arrêtée, vous devez supprimer tous les événements en direct du contenu de la chaîne avant de la redémarrer.</aside>
 			</li>
-		</ol>
-	</section>
-</article>
+		</ol>   </section></article>

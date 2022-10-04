@@ -1,35 +1,17 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="analytics">Viewing channel output and analytics</h2>
-    <p>While the channel is in a <strong>RUNNING</strong> state, it is possible to view channel output and analytics. Click on the channel on the <strong>Channels</strong> page to open the channel details.</p>
-    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-cloudplayout-img/cloudplayout-program-analytics.png" /></figure>
-    <aside class="bcls-aside bcls-aside--information">Note: The preview image is updated every three seconds.</aside>
-    <p>Click <strong>View in Brightcove Live</strong> to open the Live module Control Room page with the currently running program. The currently playing video in the program will be highlighted with a <strong>Playing Now</strong> banner. Also notice the <strong>Status</strong> notification in the upper right, and the <img src="/assets/images/s-cloudplayout-img/cloudplayout-video-icon.png" alt="Live icon"> that will be green if there is a live feed available. Otherwise it will be red if a live event is currently playing, or gray if VOD content is playing.</p>
-    <p>The following analytics values will be displayed:</p>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="analytics">Affichage des résultats et des analyses des chaînes</h2>
+    <p>Lorsque le canal est en<strong> état</strong> RUNNING, il est possible d'afficher la sortie et les analyses du canal. Cliquez sur la chaîne sur la<strong> page</strong> Channels pour ouvrir les détails de la chaîne.</p> <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/s-cloudplayout-img/cloudplayout-program-analytics.png" /></figure> <aside class="bcls-aside bcls-aside--information">Remarque: L'image d'aperçu est mise à jour toutes les trois secondes.</aside>
+    <p>Cliquez sur<strong> View in Brightcove Live</strong> pour ouvrir la page Control Room du module Live avec le programme en cours d'exécution. La vidéo en cours de lecteur dans le programme sera mise en surbrillance avec une<strong> bannière</strong> Lecture en cours. Notez également la<strong> notification</strong> Status en haut à droite et le <img src="/assets/images/s-cloudplayout-img/cloudplayout-video-icon.png" alt="Icône Live"> qui sera verte s'il y a un flux en direct disponible. Sinon, il sera rouge si un événement en direct est en cours de diffusion, ou gris si du contenu VOD est en cours de lecteur.</p>
+    <p>Les valeurs d'analyse suivantes s'affichent:</p>
     <ul>
-      <li><strong>Network In</strong> - Average bytes per second in the last minute</li>
-      <li><strong>Network Out</strong> - Average bytes per second in the last minute</li>
-      <li><strong>Frames Dropped</strong> - Percent of frames dropped in the last minute</li>
+      <li><strong>Network In</strong>: nombre moyen d'octets par seconde au cours de la dernière minute</li>
+      <li><strong>Network Out</strong>: nombre moyen d'octets par seconde au cours de la dernière minute</li>
+      <li><strong>Frames Dropped</strong>: pourcentage d'images perdues au cours de la dernière minute</li>
     </ul>
-    <p>The <strong>Network In</strong> analytics are particularly useful for detecting when the stream for a live event has failed (you should also see the slate video playing in the output rather than the live stream):
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-network-in-analytics.png" alt="Network In Analytics">
-        <figcaption class="bcls-caption--image">Network In Analytics</figcaption>
-      </figure>
-    </p>
-  </section>
-    <section class="bcls-section">
-      <h2 id="Playing_a_program-item_next">Playing a program item next</h2>
-      <p>In the <strong>Schedule</strong> beneath the analytics, you can click <span class="button-blue-text-bordered">Show Playing Now</span> to see the item that is currently playing. If you hover over any <strong><em>future</em></strong> item, the item thumbnail will change to Play icon, which you can click to have that item play next (instead of the next item in the schedule):</p>
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/playing-now-item.png" alt="Item Playing Now">
-        <figcaption class="bcls-caption--image">Item Playing Now</figcaption>
-      </figure>
-      <figure class="bcls-figure">
-        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/play-item-now.png" alt="Play Item Next">
-        <figcaption class="bcls-caption--image">Play Item Next</figcaption>
-      </figure>
-    </section>
-</article>
+    <p>Les<strong> analyses</strong> Network In sont particulièrement utiles pour détecter quand le flux d'un événement en direct a échoué (vous devriez également voir la vidéo en ardoise lue dans la sortie plutôt que dans le flux en direct): <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/cloudplayout-network-in-analytics.png" alt="Réseau dans Analytics"> <figcaption class="bcls-caption--image">Réseau dans Analytics</figcaption> </figure>
+    </p>  </section><section class="bcls-section">
+      <h2 id="Playing_a_program-item_next">Lire ensuite un élément de programme</h2>
+      <p>Dans le<strong> calendrier</strong> sous les statistiques, vous pouvez cliquer sur<span class="button-blue-text-bordered"> Afficher le jeu en cours</span> de lecteur pour voir l'élément en cours de lecteur. Si vous passez la souris sur un<strong><em> objet</em></strong> futur, la miniature de l'élément se transforme en icône Jouer, sur laquelle vous pouvez cliquer pour que cet objet soit joué ensuite (au lieu de l'élément suivant dans le calendrier):</p> <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/playing-now-item.png" alt="Objet en cours de lecteur"> <figcaption class="bcls-caption--image">Objet en cours de lecteur</figcaption> </figure> <figure class="bcls-figure">
+        <img class="bcls-image" src="/assets/images/s-cloudplayout-img/play-item-now.png" alt="Jouer à l'objet suivant"> <figcaption class="bcls-caption--image">Jouer à l'objet suivant</figcaption> </figure> </section> </article>

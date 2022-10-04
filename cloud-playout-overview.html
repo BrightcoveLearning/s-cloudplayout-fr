@@ -1,89 +1,66 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>Brightcove Cloud Playout is a Studio module that enables you to program a scheduled playout of items from your VOD catalogue, combined with live feeds, and stream it as a Linear Channel all with the reliability and scalability of Brightcove Live.</p>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Brightcove Cloud Playout est un module Studio qui vous permet de programmer une diffusion programmée d'articles de votre catalogue VOD, combinée à des flux en direct, et de la diffuser en tant que canal linéaire, le tout avec la fiabilité et l'évolutivité de Brightcove Live.</p>
     {% if site.product_short != 'Video Cloud' %}
-		<p>You can then use the Cloud Playout channel as a {{ site.product_short }} Channel by entering information about it in creating a <a href="/channels/{{ site.product_short }}-channels/creating-a-channel.html">{{ site.product_short }} Channel</a>. One major advantage to using Cloud Playout channels is that you will not need to find and integrate a 3rd party EPG provider, since an EPG service is built into Cloud Playout.</p>
+		<p>Vous pouvez ensuite utiliser la chaîne Cloud Playout comme chaîne {{site.product_short}} en saisissant les informations la concernant lors de la création d'une chaîne<a href="/channels/{{ site.product_short }}-channels/creating-a-channel.html"> {{site.product_short}}</a>. L'un des principaux avantages de l'utilisation des chaînes Cloud Playout est que vous n'aurez pas besoin de trouver et d'intégrer un fournisseur d'EPG tiers, puisqu'un service EPG est intégré à Cloud Playout.</p>
     {% endif %}
-    <p>Cloud Playout offers a powerful, end-to-end solution for channels of scheduled programming, including:</p>
+    <p>Cloud Playout offre une solution puissante de bout en bout pour les chaînes de programmation programmées, notamment:</p>
     <ul>
-      <li>24x7 Linear Channels</li>
-      <li>Pop-Up / Virtual Channels</li>
-      <li>Simulated Live Events</li>
+      <li>Canaux linéaires 24 x 7</li>
+      <li>Chaînes pop-up/virtuelles</li>
+      <li>Événements en direct simulés</li>
     </ul>
-    <p>Cloud Playout helps you increase audience engagement and create new revenue opportunities through a broadcast-like, Live TV experience leveraging pre-recorded content. Use existing VOD assets and add live events (optionally) to create scheduled live channels.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Features">Features</h2>
-    <p>Features of Cloud Playout include:</p>
+    <p>Cloud Playout vous aide à accroître l'engagement de votre public et à créer de nouvelles opportunités de revenus grâce à une expérience télévisuelle en direct similaire à celle d'une diffusion en direct qui exploite du contenu préenregistré. Utilisez les ressources VOD existantes et ajoutez des événements en direct (en option) pour créer des chaînes en direct programmées.</p>  </section><section class="bcls-section">
+    <h2 id="Features">Caractéristiques</h2>
+    <p>Les fonctionnalités de Cloud Playout incluent:</p>
     <ul>
-      <li>Import VOD assets from your Video Cloud Media library.</li>
-      <li>Switch between VOD assets and scheduled live feeds.</li>
-      <li>React in real time to last minute schedule changes in an easy, quick, and reliable manner.</li>
-      <li>Monetize your channel content with server-side ad insertion (SSAI).</li>
-      <li>Configure your channel to loop your program.</li>
-      <li>Optimize playout by device.</li>
-      <li>Drag and drop to re-order the program schedule at any moment, even in Running state.</li>
+      <li>Importez des ressources VOD depuis votre médiathèque Video Cloud.</li>
+      <li>Basculez entre les ressources VOD et les flux en direct programmés.</li>
+      <li>Réagissez en temps réel aux changements d'horaire de dernière minute de manière simple, rapide et fiable.</li>
+      <li>Monétisez le contenu de votre chaîne grâce à l'insertion d'annonces côté serveur (SSAI).</li>
+      <li>Configurez votre chaîne pour diffuser votre programme en boucle.</li>
+      <li>Optimisez la diffusion par appareil.</li>
+      <li>Glissez-déposez pour réorganiser la programmation du programme à tout moment, même en état En cours d'exécution.</li>
       <!-- <li>Push a channel to your owned and operated properties via Brightcove Live, an Amazon S3 bucket, or a 3rd party destination via RTMP output.</li> -->
-      <li>API to retrieve the EPG (electronic program guide) for a channel</li>
-    </ul>
-  </section>
-  {% if site.product_short != 'Video Cloud' and site.product_short != 'Beacon Classic' %}
-	<section class="bcls-section">
-		<h2 id="workflow_overview">Workflow overview</h2>
-		<p>There are four parts to creating a Cloud Playout channel and adding it to your {{ site.product_short }} app:</p>
+      <li>API pour récupérer l'EPG (guide électronique des programmes) d'une chaîne</li>
+    </ul> </section> {% if site.product_short != 'Video Cloud' et site.product_short != 'Beacon Classic' %} <section class="bcls-section">
+		<h2 id="workflow_overview">Aperçu du flux de</h2>
+		<p>La création d'une chaîne Cloud Playout et son ajout à votre application {{site.product_short}} se déroulent en quatre étapes:</p>
 		<ol class="bcls-tasklist-restart">
-			<li>In <strong>{{ site.product_short }} Studio</strong>, create the channel.</li>
-			<li>In <strong>{{ site.product_short }} Classic</strong>, create a new {{ site.product_short }} channel that uses the Cloud Playout channel as its source.</li>
-      <li>In <strong>{{ site.product_short }} Studio</strong>, add the channel to a playlist.</li>
-      <li>In <strong>{{ site.product_short }} Studio</strong>, add the playlist to page.</li>
+			<li>Dans<strong> {{site.product_short}} Studio</strong>, créez la chaîne.</li>
+			<li>Dans<strong> {{site.product_short}} Classic</strong>, créez une nouvelle chaîne {{site.product_short}} qui utilise la chaîne Cloud Playout comme source.</li>
+      <li>Dans<strong> {{site.product_short}} Studio</strong>, ajoutez la chaîne à une playlist.</li>
+      <li>Dans<strong> {{site.product_short}} Studio</strong>, ajoutez la playlist à la page.</li>
 		</ol>
-		<p>These tasks are detailed in the <a href="#Related_topics">Related topics</a></p>
-	</section>
-  {% elsif site.product_short == 'Beacon Classic' %}
-	<section class="bcls-section">
-		<h2 id="workflow_overview">Workflow overview</h2>
-		<p>There are four parts to creating a Cloud Playout channel and adding it to your {{ site.product_short }} app:</p>
+		<p>Ces tâches sont détaillées dans les rubriques<a href="#Related_topics"> connexes</a></p> </section> {% elsif site.product_short == 'Beacon Classic' %} <section class="bcls-section">
+		<h2 id="workflow_overview">Aperçu du flux de</h2>
+		<p>La création d'une chaîne Cloud Playout et son ajout à votre application {{site.product_short}} se déroulent en quatre étapes:</p>
 		<ol class="bcls-tasklist-restart">
-			<li>In <strong>Video Cloud Studio</strong>, create the channel.</li>
-			<li>In <strong>{{ site.product_short }}</strong>, create a new {{ site.product_short }} channel that uses the Cloud Playout channel as its source.</li>
-      <li>In <strong>{{ site.product_short }}</strong>, add the channel to a playlist.</li>
-      <li>In <strong>{{ site.product_short }}</strong>, add the playlist to page.</li>
+			<li>Dans<strong> Video Cloud Studio</strong>, créez la chaîne.</li>
+			<li>Dans<strong> {{site.product_short}}</strong>, créez une nouvelle chaîne {{site.product_short}} qui utilise la chaîne Cloud Playout comme source.</li>
+      <li>Dans<strong> {{site.product_short}}</strong>, ajoutez la chaîne à une playlist.</li>
+      <li>Dans<strong> {{site.product_short}}</strong>, ajoutez la playlist à la page.</li>
 		</ol>
-		<p>These tasks are detailed in the <a href="#Related_topics">Related topics</a></p>
-	</section>
-  {% endif %}
-  <section class="bcls-section">
+		<p>Ces tâches sont détaillées dans les rubriques<a href="#Related_topics"> connexes</a></p> </section> {% endif %} <section class="bcls-section">
     <h2 id="limitations">Limitations</h2>
-    <p>The following assumptions and limitations apply.</p>
+    <p>Les hypothèses et limites suivantes s'appliquent.</p>
     <ul>
-      <li>Your videos must be ingested or re-transcoded using a Dynamic Delivery profile and <strong>must have an MP4 rendition</strong>:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mp4-in-ingest-profile.png" alt="Ingest Profiles with MP4">
-          <figcaption class="bcls-caption--image">Ingest Profiles with MP4</figcaption>
-        </figure>
+      <li>Vos vidéos doivent être ingérées ou retranscodées à l'aide d'un profil de diffusion dynamique et<strong> doivent avoir un rendu MP4</strong>: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/mp4-in-ingest-profile.png" alt="Ingérer des profils avec MP4"> <figcaption class="bcls-caption--image">Ingérer des profils avec MP4</figcaption> </figure>
       </li>
-      <li>For channels to work in {{ site.product_short }}, you need to <strong>specify Brightcove Live as the destination</strong>.</li>
-      <li>The maximum input bitrate and resolution supported for Cloud Playout is 20MBPS/1080p for VOD and live inputs.</li>
-      <li>Brightcove recommends using videos with at least a 2 minute duration to ensure a correct transition between videos and electronic program guide accuracy</li>
-      <li>Captions (text tracks) added to videos currently will display in Cloud Playout channels if you have <a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html">requested closed captions</a> for MP4 renditions.</li>
-      <li>The minimum length for Live events is 5 minutes.</li>
-      <li>Every Live Event in Cloud Playout shares an 1:1 relation with a Video Cloud remote asset. This remote asset cannot be re-used in other channels. If the live event is removed from the channel, the associated remote asset will be automatically deleted. When a channel is deleted, any associated remote assets will also be deleted automatically.</li>
-      <li>Videos <strong>shared</strong> to the account from another account currently cannot be added to a Cloud Playout channel.</li>
-      <li>When a live event is currently playing, but no active feed is available, the slate content will be played in a loop until the live feed resumes or the event ends. There will be a delay of approximately 30 seconds before the slate MP4 starts playing.</li>
-      <!--<li><strong>Input Looper : if the asset URL is duplicated, then input looper rely on order for switching; if the order is changes during the course of the switching , then subsequent N+1 switch it attempt to create would rely on the order. </strong></li>-->
-      <li>If the Video Cloud account is configured for geo-restriction, then the channel <strong>Output Region</strong> should be created in a  region compatible with the Video Cloud geo-restriction policy.</li>
-      <li>For the best experience, Brightcove recommends using the Google Chrome browser.</li>
+      <li>Pour que les chaînes fonctionnent dans {{site.product_short}}, vous devez<strong> spécifier Brightcove Live comme destination</strong>.</li>
+      <li>Le débit binaire d'entrée et la résolution maximaux pris en charge pour Cloud Playout sont de 20 Mbps/1080p pour les entrées VOD et en direct.</li>
+      <li>Brightcove recommande d'utiliser des vidéos d'une durée d'au moins 2 minutes pour garantir une transition correcte entre les vidéos et la précision du guide électronique des programmes.</li>
+      <li>Les sous-titres (pistes de texte) ajoutés aux vidéos actuellement s'afficheront dans les chaînes Cloud Playout si vous avez<a href="https://apis.support.brightcove.com/dynamic-ingest/ingest-guides/ingesting-webvtt-files-text-trackscaptions.html"> demandé des sous-titres codés</a> pour les rendus MP4.</li>
+      <li>La durée minimale des événements en direct est de 5 minutes.</li>
+      <li>Chaque événement en direct dans Cloud Playout partage une relation individuelle avec une ressource distante Video Cloud. Cette ressource distante ne peut pas être réutilisée sur d'autres canaux. Si l'événement en direct est supprimé de la chaîne, la ressource distante associée sera automatiquement supprimée. Lorsqu'une chaîne est supprimée, toutes les ressources distantes associées sont également supprimées automatiquement.</li>
+      <li>Les vidéos<strong> partagées</strong> sur le compte à partir d'un autre compte ne peuvent actuellement pas être ajoutées à une chaîne Cloud Playout.</li>
+      <li>Lorsqu'un événement en direct est en cours de lecteur, mais qu'aucun flux actif n'est disponible, le contenu de l'ardoise sera lu en boucle jusqu'à ce que le flux en direct reprenne ou que l'événement se termine. Il y aura un délai d'environ 30 secondes avant que l'ardoise MP4 ne commence à jouer.</li>
+      <!--<li><strong>Input Looper : if the asset URL is duplicated, then input looper rely on order for switching; if the order is changes during the course of the switching , then subsequent N+1 switch it attempt to create would rely on the order.Â </strong></li>-->
+      <li>Si le compte Video Cloud est configuré pour la géo-restriction, la région de<strong> sortie du canal</strong> doit être créée dans une région compatible avec la stratégie de restriction géographique de Video Cloud.</li>
+      <li>Pour une expérience optimale, Brightcove recommande d'utiliser le navigateur Google Chrome.</li>
       <li>
-        For SSAI-enabled channels, the destination must be set to an ad-enabled RTP live event:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/advanced-options-for-live-job.png" alt="Live Settings for SSAI Channel">
-          <figcaption class="bcls-caption--image">Live Settings for SSAI Channel</figcaption>
-        </figure>
+        Pour les chaînes prenant en charge SSAI, la destination doit être définie sur un événement RTP en direct avec publicité: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/advanced-options-for-live-job.png" alt="Réglages en direct pour la chaîne SSAI"> <figcaption class="bcls-caption--image">Réglages en direct pour la chaîne SSAI</figcaption> </figure>
       </li>
-    </ul>
-  </section>
-  
-</article>
+    </ul>   </section></article>

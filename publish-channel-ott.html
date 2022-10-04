@@ -1,179 +1,119 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <aside class="bcls-aside bcls-aside--information">NOTE: In this topic, some of the steps are performed in {{ site.product_short }} Studio and some in {{ site.product_short }} Classic.</aside>
-
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>Once you have created your Cloud Playout channel, there are three steps you need to perform in order to make it part of your {{ site.product_short }} app. These are detailed in the sections that follow.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Get_information_for_the_ott_Channel">Get information for the {{ site.product_short }} Channel</h2>
-    <p>Before you proceed you will want to capture information that you will need in setting up your {{ site.product_short }} channel and playlist.</p>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <aside class="bcls-aside bcls-aside--information"> REMARQUE
+description: Dans cette rubrique, certaines étapes sont effectuées dans {{site.product_short}} Studio et d'autres dans {{site.product_short}} Classic.</aside> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Une fois que vous avez créé votre chaîne Cloud Playout, vous devez suivre trois étapes pour l'intégrer à votre application {{site.product_short}}. Elles sont détaillées dans les sections qui suivent.</p>  </section><section class="bcls-section">
+    <h2 id="Get_information_for_the_ott_Channel">Obtenir des informations sur la chaîne {{site.product_short}}</h2>
+    <p>Avant de poursuivre, vous devez recueillir les informations dont vous aurez besoin pour configurer votre chaîne et votre playlist {{site.product_short}}.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Go to the channel details page by clicking on the channel in the channel list.</li>
-      <li>If you have not already done so, click <span class="button-red-text-border"><i data-feather="play" class="button-icon"></i> Activate</span> to activate the channel. See <a href="{{ site.cloud_playout_path }}using-channel-actions.html">Using Channel Actions</a> for more details.</li>
-      <li>After the channel has activated, use the main navigation to go to the <strong>Media</strong> module.</li>
+      <li>Accédez à la page des détails de la chaîne en cliquant sur la chaîne dans la liste des chaînes.</li>
+      <li>Si ce n'est pas déjà fait, cliquez sur<span class="button-red-text-border"> Activer</span> pour activer la chaîne. Pour plus de détails, consultez la section<a href="{{ site.cloud_playout_path }}using-channel-actions.html"> Utilisation</a> des actions de canal</li>
+      <li>Une fois la chaîne activée, utilisez la navigation principale pour accéder au<strong> module</strong> Médias.</li>
       <li>
-        At the top of the video list, you should see a new live video that was created for your Cloud Playout channel:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/video-list.png" alt="Video List">
-          <figcaption class="bcls-caption--image">Video List</figcaption>
-        </figure>
-        <p>Note that it will be a Live video with no associated image.</p>
+        En haut de la liste des vidéos, vous devriez voir une nouvelle vidéo en direct créée pour votre chaîne Cloud Playout: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/video-list.png" alt="Liste des vidéos"> <figcaption class="bcls-caption--image">Liste des vidéos</figcaption> </figure>
+        <p>Notez qu'il s'agira d'une vidéo en direct sans image associée.</p>
       </li>
-      <li>Click on the video name to open the details.</li>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/video-id-and-channel-id.png" alt="Video for Cloud Playout">
-          <figcaption class="bcls-caption--image">Video for Cloud Playout</figcaption>
-        </figure>
-      <li>Save both the <strong>video ID</strong> and the <strong>channel ID</strong> (the long alphanumeric string that follows <strong>cloud-playout:</strong> in the Tags).</li>
+      <li>Cliquez sur le nom de la vidéo pour afficher les détails.</li> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/video-id-and-channel-id.png" alt="Vidéo pour Cloud Playout"> <figcaption class="bcls-caption--image">Vidéo pour Cloud Playout</figcaption> </figure>
+      <li>Enregistrez l'ID<strong> vidéo</strong> et l'ID de la<strong> chaîne</strong> (la longue chaîne alphanumérique qui suit la<strong> diffusion en nuage:</strong> dans les balises).</li>
     </ol>
-    <p>Note that the channel ID is also available in the Channel Details in the Cloud Playout module:
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/channel-id.png" alt="Channel ID">
-      <figcaption class="bcls-caption--image">Channel ID</figcaption>
-    </figure>
-    </p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="create_ott_channel">Create a {{ site.product_short }} Channel</h2>
-    <aside class="bcls-aside bcls-aside--information language-editable">This step must currently be performed in <strong>{{ site.product_short }} Classic</strong>.</aside>
-    <p>To create a Channel in {{ site.product }}, follow these steps:</p>
-    <h3>Basic data</h3>
+    <p>Notez que l'ID de la chaîne est également disponible dans les détails de la chaîne du module Cloud Playout: <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/channel-id.png" alt="ID du canal"> <figcaption class="bcls-caption--image">ID du canal</figcaption> </figure>
+    </p>  </section><section class="bcls-section">
+    <h2 id="create_ott_channel">Créez une chaîne {{site.product_short}}</h2> <aside class="bcls-aside bcls-aside--information language-editable">Cette étape doit actuellement être effectuée dans<strong> {{site.product_short}} Classic</strong>.</aside>
+    <p>Pour créer une chaîne dans {{site.product}}, procédez comme suit:</p>
+    <h3>Données de base</h3>
     <ol class="bcls-tasklist">
-      <li>Log in to {{ site.product_short }} Classic.</li>
-      <li>In the top navigation, select <strong>Channels</strong>.</li>
-      <li>Click the <strong>Add new channel</strong> button.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" src="/assets/images/channels/creating-channels/1-add-new-channel.png" alt="" width="" height="" />
-        </figure>
+      <li>Connectez-vous à {{site.product_short}} Classic.</li>
+      <li>Dans le menu de navigation supérieur, sélectionnez<strong> Channels</strong>.</li>
+      <li>Cliquez sur le<strong> bouton</strong> Ajouter une nouvelle chaîne. <figure class="bcls-figure"> <img class="bcls-image--no-border" src="/assets/images/channels/creating-channels/1-add-new-channel.png" alt="" width="" height="" /> </figure>
       </li>
-      <li>In the <strong>Basic Data</strong> tab, define a <strong>Name</strong> for your channel.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" src="/assets/images/channels/creating-channels/2-basic-data.png" alt="" />
-        </figure>
+      <li>Dans l'<strong>onglet Données de</strong> base, définissez un<strong> nom</strong> pour votre chaîne. <figure class="bcls-figure"> <img class="bcls-image--no-border" src="/assets/images/channels/creating-channels/2-basic-data.png" alt="" /> </figure>
       </li>
       <li>
-        Enter the Cloud Playout channel ID: <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/enter-cloud-playout-channel-id.png" alt="Enter Cloud Playout Channel ID">
-          <figcaption class="bcls-caption--image">Enter Cloud Playout Channel ID</figcaption>
-        </figure>
-        <p>To find the Cloud Playout channel ID, see <a href="{{ site.cloud_playout_path }}cloud-playout-stream-vod.html#Get_information_for_the_ott_Channel">Get information for the {{ site.product_short }} Channel</a>.</p>
+        Saisissez l'ID de la chaîne Cloud Playout: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/enter-cloud-playout-channel-id.png" alt="Saisir l'ID de chaîne Cloud Playout"> <figcaption class="bcls-caption--image">Saisir l'ID de chaîne Cloud Playout</figcaption> </figure>
+        <p>Pour trouver l'ID de la chaîne Cloud Playout, consultez<a href="{{ site.cloud_playout_path }}cloud-playout-stream-vod.html#Get_information_for_the_ott_Channel"> Obtenir des informations pour la chaîne {{site.product_short}}</a>.</p>
       </li>
-      <li>In the <strong>Content Rating</strong> dropdown menu, select your channel's content rating based on the Content Rating System of the country where your channel will be streaming. In the example image, it is for the US <strong>TV-Y</strong>.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" src="/assets/images/channels/creating-channels/2.2-basic-data-options.png" alt="Channel Data Options" />
-        </figure>
+      <li>Dans le menu<strong> déroulant Évaluation</strong> du contenu, sélectionnez le classement du contenu de votre chaîne en fonction du système de classement du contenu du pays dans lequel votre chaîne sera diffusée en streaming. Dans l'image d'exemple, c'est pour la<strong> TV-Y américaine</strong>. <figure class="bcls-figure">
+          <img class="bcls-image--no-border" src="/assets/images/channels/creating-channels/2.2-basic-data-options.png" alt="Options de données de canal" /> </figure>
       </li>
-      <li>In the <strong>Genres Details</strong> section, click the <strong>Genres</strong> dropdown menu to select a genre for your channel. (Example: Horror, Drama, etc..)</li>
-      <li>If you don’t find the correct genre for your channel, you can create additional ones by clicking the <strong>Create Genre</strong> button.</li>
-      <aside class="bcls-aside bcls-aside--information">The <strong>Sub-Genres</strong> dropdown menu is not functional at this time.</aside>
+      <li>Dans la <strong></strong>section Détails sur les<strong> genres, cliquez sur le menu</strong> déroulant Genres pour sélectionner un genre pour votre chaîne. (Exemple: Horreur, Drame, etc.)</li>
+      <li>Si vous ne trouvez pas le genre correct pour votre chaîne, vous pouvez en créer d'autres en cliquant sur le<strong> bouton</strong> Créer un genre.™</li> <aside class="bcls-aside bcls-aside--information">Le menu<strong> déroulant</strong> Sous-genres n'est pas fonctionnel pour le moment.</aside>
     </ol>
-    <h3 id="textual-data">Textual Data</h3>
-    <p>The <strong>Textual Data</strong> section allows you to add displayable text for your Channel.</p>
+    <h3 id="textual-data">Données textuelles</h3>
+    <p>La<strong> section Données</strong> textuelles vous permet d'ajouter du texte affichable pour votre chaîne.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Select the <strong>Textual Data</strong> tab.
-        <figure class="bcls-figure">
-          <img class="bcls-image--no-border" src="/assets/images/channels/creating-channels/3-textual-data.png" alt="" width="" height="" />
-        </figure>
+      <li>Sélectionnez l'<strong>onglet Données</strong> textuelles. <figure class="bcls-figure"> <img class="bcls-image--no-border" src="/assets/images/channels/creating-channels/3-textual-data.png" alt="" width="" height="" /> </figure>
       </li>
-      <li>In the <strong>Title</strong> field, define a title for your channel.</li>
-      <li>In the <strong>Description</strong> field, define a description for your channel.</li>
-      <li>In the <strong>Synopsis</strong> field, define a synopsis for your channel.
-      </li>
-      <aside class="bcls-aside bcls-aside--information">You can add a <strong>Textual Data</strong> section for every different language you will use in your channel. </aside>
+      <li>Dans le<strong> champ</strong> Titre, définissez un titre pour votre chaîne.</li>
+      <li>Dans le<strong> champ</strong> Description, définissez une description pour votre chaîne.</li>
+      <li>Dans le<strong> champ</strong> Synopsis, définissez un synopsis pour votre chaîne.
+      </li> <aside class="bcls-aside bcls-aside--information">Vous pouvez ajouter une<strong> section Données</strong> textuelles pour chaque langue que vous utiliserez dans votre chaîne. </aside>
     </ol>
     <h3>Streams</h3>
-    <p>In the Streams section you will set up streaming information for your channel</p>
+    <p>Dans la section Streams, vous allez configurer les informations de streaming pour votre chaîne.</p>
     <ol class="bcls-tasklist-restart">
       <li>
-        In the Streams section, select <strong>Brightcove</strong> as the <strong>Provider</strong> and click <strong>Add new stream</strong>:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-add-new-stream.png" alt="Add New Stream">
-          <figcaption class="bcls-caption--image">Add New Stream</figcaption>
-        </figure>
+        Dans la section Streams, sélectionnez<strong> Brightcove</strong> comme<strong> fournisseur</strong> et cliquez sur<strong> Ajouter un nouveau flux</strong>: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-add-new-stream.png" alt="Ajouter un nouveau flux"> <figcaption class="bcls-caption--image">Ajouter un nouveau flux</figcaption> </figure>
       </li>
       <li>
-        Add the Steams information:
+        Ajoutez les informations Steams:
         <ul>
-          <li><strong>Stream Video ID:</strong> enter the video ID for the channel's Live stream</li>
-          <li><strong>Devices to Publish:</strong> click Select/Unselect All Devices and then remove any that you do not want to publish to</li>
-          <li><strong>Stream Type:</strong> select <strong>Live</strong></li>
-          <li><strong>DRM Type :</strong> select the DRM type you are using or <strong>Open</strong></li>
-          <li><strong>Stream Format:</strong> select HLS</li>
-        </ul>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-stream-settings.png" alt="Streams Settings">
-          <figcaption class="bcls-caption--image">Streams Settings</figcaption>
-        </figure>
+          <li><strong>Stream Video ID:</strong> saisissez l'ID vidéo pour le flux en direct de la chaîne</li>
+          <li><strong>Appareils à publier:</strong> cliquez sur Sélectionner/Désélectionner tous les appareils, puis supprimez ceux sur lesquels vous ne souhaitez pas publier</li>
+          <li><strong>Type de diffusion:</strong> sélectionnez<strong> Live</strong></li>
+          <li><strong>Type de DRM:</strong> sélectionnez le type de DRM que vous utilisez ou<strong> Ouvrir</strong></li>
+          <li><strong>Stream Format:</strong> sélectionnez HLS</li>
+        </ul> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-stream-settings.png" alt="Paramètres Streams"> <figcaption class="bcls-caption--image">Paramètres Streams</figcaption> </figure>
       </li>
     </ol>
-    <h3>Rights & Scheduling</h3>
+    <h3>Droits et calendrier</h3>
     <ol class="bcls-tasklist-restart">
       <li>
-        In the <strong>Rights & Scheduling</strong> section, add the following information:
+        Dans la<strong> section</strong> Droits et planification, ajoutez les informations suivantes:
         <ul>
-          <li><strong>Status:</strong> select Published</li>
-          <li><strong>Allow Downloads:</strong> choose whether to allow viewers to download content (in most cases, the answer will be no)</li>
-          <li><strong>Rights Type:</strong> select Free or whatever is appropriate for your content</li>
-          <li><strong>Start Time:</strong> the time to make the channel available (choose a date in the past to make it available immediately)</li>
-          <li><strong>End Time:</strong> the time the channel will become unavailable (you can set it far in future if you want it to run indefinitely)</li>
-          <li><strong>Max Streams:</strong> You don't need to enter anything - leave it at 0</li>
-          <li><strong>Devices to Publish:</strong> click Select/Unselect All Devices and then remove any that you do not want to publish to</li>
-          <li><strong>Permitted locations:</strong> enter <strong>World</strong> or the areas you allow viewing</li>
-          <li><strong>Denied locations:</strong> leave blank or enter areas where viewing is not permitted</li>
-        </ul>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-rights-scheduling.png" alt="Rights & Scheduling Settings">
-          <figcaption class="bcls-caption--image">Rights & Scheduling Settings</figcaption>
-        </figure>
+          <li><strong>État:</strong> sélectionnez Publié</li>
+          <li><strong>Autoriser les téléchargements:</strong> choisissez d'autoriser ou non les spectateurs à télécharger du contenu (dans la plupart des cas, la réponse sera non)</li>
+          <li><strong>Type de droits:</strong> sélectionnez Gratuit ou tout ce qui convient à votre contenu</li>
+          <li><strong>Heure de début:</strong> l'heure de mise à disposition de la chaîne (choisissez une date dans le passé pour la rendre disponible immédiatement)</li>
+          <li><strong>Heure de fin:</strong> l'heure à laquelle la chaîne sera indisponible (vous pouvez la définir loin dans le futur si vous souhaitez qu'elle soit diffusée indéfiniment)</li>
+          <li><strong>Flux maximum:</strong> Vous n'avez pas besoin de saisir quoi que ce soit, laissez-le à 0</li>
+          <li><strong>Appareils à publier:</strong> cliquez sur Sélectionner/Désélectionner tous les appareils, puis supprimez ceux sur lesquels vous ne souhaitez pas publier</li>
+          <li><strong>Lieux autorisés:</strong> entrez<strong> World</strong> ou les zones que vous autorisez à voir</li>
+          <li><strong>Lieux refusés:</strong> laissez en blanc ou entrez dans les zones où l'affichage n'est pas autorisé</li>
+        </ul> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-rights-scheduling.png" alt="Paramètres des droits et de la planification"> <figcaption class="bcls-caption--image">Paramètres des droits et de la planification</figcaption> </figure>
       </li>
     </ol>
-    <h3>Create the channel</h3>
+    <h3>Création de la chaîne</h3>
     <ol class="bcls-tasklist-restart">
-      <li>After you have entered all the necessary settings, click <strong>Create New Channel</strong></li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Add_channel_to_playlist">Add the channel to a playlist</h2>
-    <p>Because {{ site.product_short }} pages use <strong>playlists</strong> for content, you need to add your Cloud Playout channel to a playlist. The playlist can contain other videos, but typically it will contain only the channel so that it comprises the page contents.</p>
+      <li>Après avoir saisi tous les paramètres nécessaires, cliquez sur<strong> Créer une nouvelle chaîne</strong></li>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Add_channel_to_playlist">Ajouter la chaîne à une liste de lecteur</h2>
+    <p>Étant donné que les pages {{site.product_short}} utilisent<strong> des listes de lecteur</strong> pour le contenu, vous devez ajouter votre chaîne Cloud Playout à une playlist. La liste de lecteur peut contenir d'autres vidéos, mais elle ne contiendra généralement que la chaîne afin d'inclure le contenu de la page.</p>
     <ol class="bcls-tasklist-restart">
-      <li>Go to the Media module in {{ site.product_short }} Studio</li>
+      <li>Accédez au module Media de {{site.product_short}} Studio</li>
       <li>
-        Click <strong>Add New Playlist</strong>
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-create-playlist.png" alt="Add New Playlist">
-          <figcaption class="bcls-caption--image">Create New Playlist</figcaption>
-        </figure>
+        Cliquez sur<strong> Ajouter une nouvelle playlist</strong> <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-create-playlist.png" alt="Ajouter une nouvelle playlist"> <figcaption class="bcls-caption--image">Créer une nouvelle playlist</figcaption> </figure>
       </li>
       <li>
-        In the Create playlist dialog, enter a <strong>name</strong> for the playlist and select the <strong>Manual</strong> type. You can also add a reference ID and description, and have it show up in the sidebar if you wish.
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-create-playlist-dialog.png" alt="New Playlist Dialog">
-          <figcaption class="bcls-caption--image">Create playlist Dialog</figcaption>
-        </figure>
+        Dans la boîte de dialogue Créer une liste de lecteur, entrez un<strong> nom</strong> pour la liste de lecteur et sélectionnez le<strong> type</strong> Manuel. Vous pouvez également ajouter un ID de référence et une description, et les afficher dans la barre latérale si vous le souhaitez. <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-create-playlist-dialog.png" alt="Boîte de dialogue Nouvelle playlist"> <figcaption class="bcls-caption--image">Dialogue Créer une playlist</figcaption> </figure>
       </li>
-      <li>Click <span class="button-blue">Save</span> to save the playlist</li>
-      <li>Go to the list of videos and click the name of the video associated with your channel to open the video details.</li>
+      <li>Cliquez sur<span class="button-blue"> Enregistrer</span> pour enregistrer la liste de lecteur</li>
+      <li>Accédez à la liste des vidéos et cliquez sur le nom de la vidéo associée à votre chaîne pour ouvrir les détails de la vidéo.</li>
       <li>
-        Click the <strong>Add to</strong> dropdown and select <strong>Add to Playlist</strong>:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-add-to-playlist.png" alt="Add To Playlist">
-          <figcaption class="bcls-caption--image">Add To Playlist</figcaption>
-        </figure>
+        Cliquez sur le<strong> menu déroulant</strong> Ajouter à et sélectionnez<strong> Ajouter à la liste de lecteur</strong>: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-add-to-playlist.png" alt="Ajouter à la playlist"> <figcaption class="bcls-caption--image">Ajouter à la playlist</figcaption> </figure>
       </li>
       <li>
-        In the Add to Playlist dialog, select the playlist you created for the channel and click <span class="button-blue">Add</span>:
-        <figure class="bcls-figure">
-          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-create-playlist-dialog.png" alt="Add to Playlist Dialog">
-          <figcaption class="bcls-caption--image">Add to Playlist Dialog</figcaption>
-        </figure>
+        Dans la boîte de dialogue Ajouter à la liste de lecteur, sélectionnez la liste de lecteur que vous avez créée pour la chaîne et cliquez sur<span class="button-blue"> Ajouter</span>: <figure class="bcls-figure">
+          <img class="bcls-image" src="/assets/images/s-cloudplayout-img/publish-create-playlist-dialog.png" alt="Boîte de dialogue Ajouter à la playlist"> <figcaption class="bcls-caption--image">Boîte de dialogue Ajouter à la playlist</figcaption> </figure>
       </li>
-    </ol>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Add_channel_to_page">Add channel to a {{ site.product_short }} page</h2>
-    <p>The last step in putting your Cloud Playout channel into your {{ site.product_short }} app is the simplest one: all you need to do is add your playlist containing the channel video to page. See <a href="/layout/managing-playlists-on-pages.html">Managing Playlists on Pages</a> for details.</p>
-  </section>
-</article>
+    </ol>  </section><section class="bcls-section">
+    <h2 id="Add_channel_to_page">Ajouter une chaîne à une page {{site.product_short}}</h2>
+    <p>La dernière étape pour placer votre chaîne Cloud Playout dans votre application {{site.product_short}} est la plus simple: il vous suffit d'ajouter votre playlist contenant la vidéo de la chaîne à la page. Consultez<a href="/layout/managing-playlists-on-pages.html"> Gérer les listes de lecteur sur les pages</a> pour plus de détails.</p>   </section></article>

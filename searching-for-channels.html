@@ -1,71 +1,35 @@
-<h1>{{ page.title }}</h1>
-<article class="bcls-article">
-  <summary>{{ page.description }}</summary>
-  <section class="bcls-section">
-    <h2 id="Introduction">Introduction</h2>
-    <p>If you create many Cloud Playout channels, you will likely find it useful to search for the one(s) you want to work on at the moment. Cloud Playout provides a robust mechanism for searching for channels using either the Studio module or the <a href="https://apis.support.brightcove.com/cloud-playout-apis/guides/search-channels-api.html">Channels API</a>.</p>
-    <p>This topic covers searching for channels using Studio.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Studio_basic_search">Studio: basic search</h2>
-    <p>The simplest way to search for a channel is to enter text to search on in the search box above the channel list:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-box.png" alt="Basic Search">
-      <figcaption class="bcls-caption--image">Basic Search</figcaption>
-    </figure>
-    <p>The term(s) you enter will be matched against the channel name, id, and description. You can also use <strong>Advanced Search</strong> to add additional filters to the search, as explained in the next section.</p>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Studio-advanced-search">Studio: advanced search</h2>
-    <p>Clicking the <strong>Advanced Search</strong> link below the search box will open a panel with advanced search options:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-advanced.png" alt="Advanced Search Panel">
-      <figcaption class="bcls-caption--image">Advanced Search Panel</figcaption>
-    </figure>
-    <h3>State</h3>
-    <p>The <strong>State</strong> field is a multi-select input field that allows to filter out channels that are not in the selected state(s) from the search results:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-state.png" alt="State Filter">
-      <figcaption class="bcls-caption--image">State Filter</figcaption>
-    </figure>
-    <h3>Region</h3>
-    <p>The <strong>Region</strong> field is a multi-select input field that allows to filter out channels that do not have the selected region(s) as their destinations from the search results:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-region.png" alt="Region Filter">
-      <figcaption class="bcls-caption--image">Region Filter</figcaption>
-    </figure>
-    <h3>Text To Include</h3>
-    <p>The <strong>Text To Include</strong> field allows you to choose the channel name, description, or id (or all, which is the default) as the text to match the search term(s) in the search box against.</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-text-to-include.png" alt="Text To Include Filter">
-      <figcaption class="bcls-caption--image">Text To Include Filter</figcaption>
-    </figure>
-    <h3>Channel Flags and Outputs</h3>
-    <p>The <strong>Channel Flags</strong> allow you to filter search results based on whether or not the channel has looping, SSAI, Live Events, and/or Dynamic Overlays enabled or not. When you select one of the filters, it will be entered in the query as <code translate="no">true</code>. If you want to filter by the flag set to <code translate="no">false</code> you will need to edit the filter in the search query manually:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-channel-flags.png" alt="Channel Flag Filter in Query">
-      <figcaption class="bcls-caption--image">Channel Flag Filter in Query</figcaption>
-    </figure>
-    <p>The <strong>Outputs</strong> filter allows you to filter results based on the output destination:</p>
-    <figure class="bcls-figure">
-      <img src="/assets/images/s-cloudplayout-img/search-channel-flags2.png" alt="Channel Flags and Outputs" class="bcls-image">
-      <figcaption class="bcls-caption--image">Channel Flags and Outputs</figcaption>
-    </figure>
-    <aside class="bcls-aside--information">Remember that SSAI-enabled channels are always output to RTP, and cannot be output to RTMP, so (for example) setting the SSAI filter (to <code translate="no">true</code>) and the RTMP filter would result in no search results.</aside>
-    <h3>Starts At and Created At</h3>
-    <p>The <strong>Starts At</strong> and <strong>Created At</strong> filters allow you select date/time ranges to return only channels for which the creation date or the start date falls within that range:</p>
-    <figure class="bcls-figure">
-      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-starts-created-at.png" alt="Starts At/Created At Filters">
-      <figcaption class="bcls-caption--image">Starts At/Created At Filters</figcaption>
-    </figure>
-  </section>
-  <section class="bcls-section">
-    <h2 id="Notes">Notes</h2>
+<h1>{{page.title}}</h1> <article class="bcls-article"> <summary>{{page.description}}</summary> <section class="bcls-section">
+    <h2 id="Introduction">Présentation</h2>
+    <p>Si vous créez de nombreuses chaînes Cloud Playout, vous trouverez probablement utile de rechercher celle (s) sur laquelle (s) vous souhaitez travailler en ce moment. Cloud Playout fournit un mécanisme robuste pour rechercher des chaînes à l'aide du module Studio ou de l'API<a href="https://apis.support.brightcove.com/cloud-playout-apis/guides/search-channels-api.html"> Channels</a>.</p>
+    <p>Cette rubrique traite de la recherche de chaînes à l'aide de Studio.</p>  </section><section class="bcls-section">
+    <h2 id="Studio_basic_search">Studio: recherche de base</h2>
+    <p>La méthode la plus simple pour rechercher une chaîne est de saisir le texte à rechercher dans la zone de recherche située au-dessus de la liste des chaînes:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-box.png" alt="Recherche de base"> <figcaption class="bcls-caption--image">Recherche de base</figcaption> </figure>
+    <p>Le ou les termes que vous saisissez seront comparés au nom, à l'identifiant et à la description de la chaîne. Vous pouvez également utiliser la recherche<strong> avancée</strong> pour ajouter des filtres supplémentaires à la recherche, comme expliqué dans la section suivante.</p>  </section><section class="bcls-section">
+    <h2 id="Studio-advanced-search">Studio: recherche avancée</h2>
+    <p>Cliquez sur le<strong> lien Recherche</strong> avancée sous la zone de recherche pour ouvrir un panneau contenant des options de recherche avancées:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-advanced.png" alt="Panneau de recherche avancée"> <figcaption class="bcls-caption--image">Panneau de recherche avancée</figcaption> </figure>
+    <h3>État</h3>
+    <p>Le<strong> champ</strong> State est un champ de saisie multi-sélection qui permet de filtrer les canaux qui ne sont pas dans le ou les états sélectionnés des résultats de la recherche:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-state.png" alt="Filtre d'état"> <figcaption class="bcls-caption--image">Filtre d'état</figcaption> </figure>
+    <h3>Région</h3>
+    <p>Le<strong> champ</strong> Region est un champ de saisie à sélection multiple qui permet de filtrer les chaînes qui n'ont pas la ou les régions sélectionnées comme destinations à partir des résultats de recherche:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-region.png" alt="Filtre de région"> <figcaption class="bcls-caption--image">Filtre de région</figcaption> </figure>
+    <h3>Texte à inclure</h3>
+    <p>Le<strong> champ</strong> Texte à inclure vous permet de choisir le nom, la description ou l'identifiant de la chaîne (ou tout, ce qui est la valeur par défaut) comme texte correspondant au (x) terme (s) de recherche dans la zone de recherche.</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-text-to-include.png" alt="Texte à inclure dans le filtre"> <figcaption class="bcls-caption--image">Texte à inclure dans le filtre</figcaption> </figure>
+    <h3>Indicateurs de canal et sorties</h3>
+    <p>Les indicateurs de<strong> chaîne vous</strong> permettent de filtrer les résultats de recherche selon que la boucle, les SSAI, les événements en direct et/ou les superpositions dynamiques sont activés ou non sur la chaîne. Lorsque vous sélectionnez l'un des filtres, il est saisi comme<code translate="no"> vrai dans la requête</code>. Si vous souhaitez filtrer en fonction de l'indicateur défini sur<code translate="no"> false,</code> vous devez modifier manuellement le filtre dans la requête de recherche:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-channel-flags.png" alt="Filtre d'indicateurs de canal dans la requête"> <figcaption class="bcls-caption--image">Filtre d'indicateurs de canal dans la requête</figcaption> </figure>
+    <p>Le<strong> filtre</strong> Outputs (Sorties) vous permet de filtrer les résultats en fonction de la destination de sortie:</p> <figure class="bcls-figure">
+      <img src="/assets/images/s-cloudplayout-img/search-channel-flags2.png" alt="Indicateurs de canal et sorties" class="bcls-image"> <figcaption class="bcls-caption--image">Indicateurs et sorties de canal</figcaption> </figure> <aside class="bcls-aside--information"> Rappelez-vous que les canaux compatibles SSAI sont toujours sortis vers RTP, et ne peuvent pas être sortis vers RTMP, donc (par exemple) définir le filtre SSAI (sur<code translate="no"> true</code>) et le filtre RTMP entraînerait l'absence de résultats de recherche.</aside>
+    <h3>Commence à et créé à</h3>
+    <p>Les<strong> filtres</strong> Commence à<strong> et</strong> Créé à vous permettent de sélectionner des plages de date/heure pour renvoyer uniquement les canaux dont la date de création ou la date de début se situe dans cette plage:</p> <figure class="bcls-figure">
+      <img class="bcls-image" src="/assets/images/s-cloudplayout-img/search-starts-created-at.png" alt="Commence à/créé à partir des filtres"> <figcaption class="bcls-caption--image">Commence à/créé à partir des filtres</figcaption> </figure> </section> <section class="bcls-section">
+    <h2 id="Notes">Remarques</h2>
     <ul>
-      <li>When the common search_text box is manually cleared then all the channels will be fetched.</li>
-      <li>When search results are being displayed a link above the channels title called <strong>Back to channels</strong> is available - clicking it loads the default channels list page.</li>
-      <li>Clicking the <strong>Clear All</strong> link at the bottom of the Advanced Search panel will clear all filters.</li>
-      <li>When all of the advanced search inputs are empty and an advanced search is performed, it will fetch all the channels.</li>
-    </ul>
-  </section>
-</article>
+      <li>Lorsque la zone search_text commune est effacée manuellement, tous les canaux seront récupérés.</li>
+      <li>Lorsque les résultats de la recherche s'affichent, un lien au-dessus du titre des chaînes appelé<strong> Retour aux chaînes</strong> est disponible. Cliquez dessus pour charger la page de liste des chaînes par défaut.</li>
+      <li>Cliquez sur le<strong> lien</strong> Effacer tout en bas du panneau Recherche avancée pour effacer tous les filtres.</li>
+      <li>Lorsque toutes les entrées de recherche avancée sont vides et qu'une recherche avancée est effectuée, elle récupère tous les canaux.</li>
+    </ul>  </section></article>
